@@ -73,16 +73,40 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManageServices.Designer.vb">
+      <DependentUpon>ManageServices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Availablility.Designer.vb">
       <DependentUpon>Availablility.vb</DependentUpon>
     </Compile>
     <Compile Include="Availablility.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Book.Designer.vb">
+      <DependentUpon>Book.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Book.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cancel.Designer.vb">
+      <DependentUpon>Cancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsers.Designer.vb">
+      <DependentUpon>ManageUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,19 +125,58 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Update.Designer.vb">
+      <DependentUpon>Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCustomerInfo.Designer.vb">
+      <DependentUpon>ViewCustomerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCustomerInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTransactions.Designer.vb">
+      <DependentUpon>ViewTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ManageServices.resx">
+      <DependentUpon>ManageServices.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Availablility.resx">
       <DependentUpon>Availablility.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Book.resx">
+      <DependentUpon>Book.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cancel.resx">
+      <DependentUpon>Cancel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsers.resx">
+      <DependentUpon>ManageUsers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update.resx">
+      <DependentUpon>Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCustomerInfo.resx">
+      <DependentUpon>ViewCustomerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTransactions.resx">
+      <DependentUpon>ViewTransactions.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +190,21 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\3749784.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\close-window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\SMS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\spa-management-system-high-resolution-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\spa-management-system-high-resolution-logo-transparent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

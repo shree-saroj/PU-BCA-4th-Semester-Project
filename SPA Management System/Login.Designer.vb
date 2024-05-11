@@ -24,18 +24,19 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.LoginPnl = New System.Windows.Forms.Panel()
-        Me.SmsLbl = New System.Windows.Forms.Label()
-        Me.UserPb = New System.Windows.Forms.PictureBox()
-        Me.SigninLbl = New System.Windows.Forms.Label()
-        Me.UnameTb = New System.Windows.Forms.TextBox()
-        Me.UnameLbl = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LoginBtn = New System.Windows.Forms.Button()
         Me.PasswordLbl = New System.Windows.Forms.Label()
         Me.PasswordTb = New System.Windows.Forms.TextBox()
-        Me.LoginBtn = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.UnameLbl = New System.Windows.Forms.Label()
+        Me.UnameTb = New System.Windows.Forms.TextBox()
+        Me.SigninLbl = New System.Windows.Forms.Label()
+        Me.UserPb = New System.Windows.Forms.PictureBox()
+        Me.ExitPb = New System.Windows.Forms.PictureBox()
         Me.LoginPnl.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserPb, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LoginPnl
@@ -44,6 +45,7 @@ Partial Class Login
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LoginPnl.BackColor = System.Drawing.Color.Snow
+        Me.LoginPnl.Controls.Add(Me.PictureBox1)
         Me.LoginPnl.Controls.Add(Me.LoginBtn)
         Me.LoginPnl.Controls.Add(Me.PasswordLbl)
         Me.LoginPnl.Controls.Add(Me.PasswordTb)
@@ -51,77 +53,20 @@ Partial Class Login
         Me.LoginPnl.Controls.Add(Me.UnameTb)
         Me.LoginPnl.Controls.Add(Me.SigninLbl)
         Me.LoginPnl.Controls.Add(Me.UserPb)
-        Me.LoginPnl.Controls.Add(Me.SmsLbl)
-        Me.LoginPnl.Location = New System.Drawing.Point(120, 76)
+        Me.LoginPnl.Location = New System.Drawing.Point(97, 49)
         Me.LoginPnl.Name = "LoginPnl"
-        Me.LoginPnl.Size = New System.Drawing.Size(748, 377)
+        Me.LoginPnl.Size = New System.Drawing.Size(824, 476)
         Me.LoginPnl.TabIndex = 0
         '
-        'SmsLbl
+        'PictureBox1
         '
-        Me.SmsLbl.AutoSize = True
-        Me.SmsLbl.Font = New System.Drawing.Font("Yu Gothic UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SmsLbl.Location = New System.Drawing.Point(21, 35)
-        Me.SmsLbl.Name = "SmsLbl"
-        Me.SmsLbl.Size = New System.Drawing.Size(284, 30)
-        Me.SmsLbl.TabIndex = 0
-        Me.SmsLbl.Text = "SPA MANAGEMENT SYSTEM"
-        '
-        'UserPb
-        '
-        Me.UserPb.Image = CType(resources.GetObject("UserPb.Image"), System.Drawing.Image)
-        Me.UserPb.Location = New System.Drawing.Point(52, 68)
-        Me.UserPb.Name = "UserPb"
-        Me.UserPb.Size = New System.Drawing.Size(215, 271)
-        Me.UserPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.UserPb.TabIndex = 1
-        Me.UserPb.TabStop = False
-        '
-        'SigninLbl
-        '
-        Me.SigninLbl.AutoSize = True
-        Me.SigninLbl.Font = New System.Drawing.Font("Yu Gothic UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SigninLbl.Location = New System.Drawing.Point(471, 92)
-        Me.SigninLbl.Name = "SigninLbl"
-        Me.SigninLbl.Size = New System.Drawing.Size(88, 30)
-        Me.SigninLbl.TabIndex = 2
-        Me.SigninLbl.Text = "SIGN IN"
-        '
-        'UnameTb
-        '
-        Me.UnameTb.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UnameTb.Location = New System.Drawing.Point(405, 142)
-        Me.UnameTb.Name = "UnameTb"
-        Me.UnameTb.Size = New System.Drawing.Size(276, 32)
-        Me.UnameTb.TabIndex = 3
-        '
-        'UnameLbl
-        '
-        Me.UnameLbl.AutoSize = True
-        Me.UnameLbl.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UnameLbl.Location = New System.Drawing.Point(295, 151)
-        Me.UnameLbl.Name = "UnameLbl"
-        Me.UnameLbl.Size = New System.Drawing.Size(104, 23)
-        Me.UnameLbl.TabIndex = 4
-        Me.UnameLbl.Text = "UserName:"
-        '
-        'PasswordLbl
-        '
-        Me.PasswordLbl.AutoSize = True
-        Me.PasswordLbl.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PasswordLbl.Location = New System.Drawing.Point(295, 201)
-        Me.PasswordLbl.Name = "PasswordLbl"
-        Me.PasswordLbl.Size = New System.Drawing.Size(96, 23)
-        Me.PasswordLbl.TabIndex = 6
-        Me.PasswordLbl.Text = "Password:"
-        '
-        'PasswordTb
-        '
-        Me.PasswordTb.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PasswordTb.Location = New System.Drawing.Point(405, 192)
-        Me.PasswordTb.Name = "PasswordTb"
-        Me.PasswordTb.Size = New System.Drawing.Size(276, 32)
-        Me.PasswordTb.TabIndex = 5
+        Me.PictureBox1.Image = Global.SPA_Management_System.My.Resources.Resources.spa_management_system_high_resolution_logo_transparent
+        Me.PictureBox1.Location = New System.Drawing.Point(106, 32)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(180, 80)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'LoginBtn
         '
@@ -131,30 +76,87 @@ Partial Class Login
         Me.LoginBtn.FlatAppearance.BorderSize = 0
         Me.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LoginBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoginBtn.Location = New System.Drawing.Point(443, 246)
+        Me.LoginBtn.Location = New System.Drawing.Point(516, 304)
         Me.LoginBtn.Name = "LoginBtn"
         Me.LoginBtn.Size = New System.Drawing.Size(135, 40)
         Me.LoginBtn.TabIndex = 7
         Me.LoginBtn.Text = "LOGIN"
         Me.LoginBtn.UseVisualStyleBackColor = False
         '
-        'PictureBox2
+        'PasswordLbl
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(962, 13)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(34, 31)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
+        Me.PasswordLbl.AutoSize = True
+        Me.PasswordLbl.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordLbl.Location = New System.Drawing.Point(368, 259)
+        Me.PasswordLbl.Name = "PasswordLbl"
+        Me.PasswordLbl.Size = New System.Drawing.Size(96, 23)
+        Me.PasswordLbl.TabIndex = 6
+        Me.PasswordLbl.Text = "Password:"
+        '
+        'PasswordTb
+        '
+        Me.PasswordTb.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordTb.Location = New System.Drawing.Point(478, 250)
+        Me.PasswordTb.Name = "PasswordTb"
+        Me.PasswordTb.Size = New System.Drawing.Size(276, 32)
+        Me.PasswordTb.TabIndex = 5
+        '
+        'UnameLbl
+        '
+        Me.UnameLbl.AutoSize = True
+        Me.UnameLbl.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UnameLbl.Location = New System.Drawing.Point(368, 209)
+        Me.UnameLbl.Name = "UnameLbl"
+        Me.UnameLbl.Size = New System.Drawing.Size(104, 23)
+        Me.UnameLbl.TabIndex = 4
+        Me.UnameLbl.Text = "UserName:"
+        '
+        'UnameTb
+        '
+        Me.UnameTb.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UnameTb.Location = New System.Drawing.Point(478, 200)
+        Me.UnameTb.Name = "UnameTb"
+        Me.UnameTb.Size = New System.Drawing.Size(276, 32)
+        Me.UnameTb.TabIndex = 3
+        '
+        'SigninLbl
+        '
+        Me.SigninLbl.AutoSize = True
+        Me.SigninLbl.Font = New System.Drawing.Font("Yu Gothic UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SigninLbl.Location = New System.Drawing.Point(544, 150)
+        Me.SigninLbl.Name = "SigninLbl"
+        Me.SigninLbl.Size = New System.Drawing.Size(88, 30)
+        Me.SigninLbl.TabIndex = 2
+        Me.SigninLbl.Text = "SIGN IN"
+        '
+        'UserPb
+        '
+        Me.UserPb.Image = Global.SPA_Management_System.My.Resources.Resources._3749784
+        Me.UserPb.Location = New System.Drawing.Point(88, 105)
+        Me.UserPb.Name = "UserPb"
+        Me.UserPb.Size = New System.Drawing.Size(215, 271)
+        Me.UserPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.UserPb.TabIndex = 1
+        Me.UserPb.TabStop = False
+        '
+        'ExitPb
+        '
+        Me.ExitPb.BackColor = System.Drawing.Color.YellowGreen
+        Me.ExitPb.Image = CType(resources.GetObject("ExitPb.Image"), System.Drawing.Image)
+        Me.ExitPb.Location = New System.Drawing.Point(991, -1)
+        Me.ExitPb.Name = "ExitPb"
+        Me.ExitPb.Size = New System.Drawing.Size(34, 31)
+        Me.ExitPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ExitPb.TabIndex = 1
+        Me.ExitPb.TabStop = False
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
-        Me.ClientSize = New System.Drawing.Size(1008, 537)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.ClientSize = New System.Drawing.Size(1024, 576)
+        Me.Controls.Add(Me.ExitPb)
         Me.Controls.Add(Me.LoginPnl)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
@@ -162,14 +164,14 @@ Partial Class Login
         Me.Text = "Login"
         Me.LoginPnl.ResumeLayout(False)
         Me.LoginPnl.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserPb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents LoginPnl As Panel
-    Friend WithEvents SmsLbl As Label
     Friend WithEvents UserPb As PictureBox
     Friend WithEvents LoginBtn As Button
     Friend WithEvents PasswordLbl As Label
@@ -177,5 +179,6 @@ Partial Class Login
     Friend WithEvents UnameLbl As Label
     Friend WithEvents UnameTb As TextBox
     Friend WithEvents SigninLbl As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ExitPb As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

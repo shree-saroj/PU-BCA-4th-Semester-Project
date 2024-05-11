@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Availablility
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Update
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,13 @@ Partial Class Availablility
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Availablility))
-        Me.AvailabilityPnl = New System.Windows.Forms.Panel()
-        Me.BookBtn = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Update))
         Me.CancelBtn = New System.Windows.Forms.Button()
-        Me.UpdateBtn = New System.Windows.Forms.Button()
+        Me.BookBtn = New System.Windows.Forms.Button()
+        Me.AvailabilityBtn = New System.Windows.Forms.Button()
+        Me.UpdatePnl = New System.Windows.Forms.Panel()
         Me.LogoutLbl = New System.Windows.Forms.Label()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
@@ -34,13 +34,19 @@ Partial Class Availablility
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'AvailabilityPnl
+        'CancelBtn
         '
-        Me.AvailabilityPnl.BackColor = System.Drawing.Color.White
-        Me.AvailabilityPnl.Location = New System.Drawing.Point(172, 37)
-        Me.AvailabilityPnl.Name = "AvailabilityPnl"
-        Me.AvailabilityPnl.Size = New System.Drawing.Size(840, 527)
-        Me.AvailabilityPnl.TabIndex = 0
+        Me.CancelBtn.BackColor = System.Drawing.Color.LightGray
+        Me.CancelBtn.FlatAppearance.BorderSize = 0
+        Me.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CancelBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CancelBtn.Location = New System.Drawing.Point(12, 255)
+        Me.CancelBtn.Name = "CancelBtn"
+        Me.CancelBtn.Size = New System.Drawing.Size(154, 63)
+        Me.CancelBtn.TabIndex = 21
+        Me.CancelBtn.Text = "Cancel" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Appointment"
+        Me.CancelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.CancelBtn.UseVisualStyleBackColor = False
         '
         'BookBtn
         '
@@ -48,40 +54,35 @@ Partial Class Availablility
         Me.BookBtn.FlatAppearance.BorderSize = 0
         Me.BookBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BookBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BookBtn.Location = New System.Drawing.Point(12, 101)
+        Me.BookBtn.Location = New System.Drawing.Point(12, 177)
         Me.BookBtn.Name = "BookBtn"
         Me.BookBtn.Size = New System.Drawing.Size(154, 63)
-        Me.BookBtn.TabIndex = 4
+        Me.BookBtn.TabIndex = 20
         Me.BookBtn.Text = "Book" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Appointment"
         Me.BookBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BookBtn.UseVisualStyleBackColor = False
         '
-        'CancelBtn
+        'AvailabilityBtn
         '
-        Me.CancelBtn.BackColor = System.Drawing.Color.LightGray
-        Me.CancelBtn.FlatAppearance.BorderSize = 0
-        Me.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CancelBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CancelBtn.Location = New System.Drawing.Point(12, 177)
-        Me.CancelBtn.Name = "CancelBtn"
-        Me.CancelBtn.Size = New System.Drawing.Size(154, 63)
-        Me.CancelBtn.TabIndex = 5
-        Me.CancelBtn.Text = "Cancel" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Appointment"
-        Me.CancelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.CancelBtn.UseVisualStyleBackColor = False
+        Me.AvailabilityBtn.BackColor = System.Drawing.Color.LightGray
+        Me.AvailabilityBtn.FlatAppearance.BorderSize = 0
+        Me.AvailabilityBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AvailabilityBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AvailabilityBtn.Location = New System.Drawing.Point(12, 101)
+        Me.AvailabilityBtn.Name = "AvailabilityBtn"
+        Me.AvailabilityBtn.Size = New System.Drawing.Size(154, 63)
+        Me.AvailabilityBtn.TabIndex = 19
+        Me.AvailabilityBtn.Text = "Check" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Appointment"
+        Me.AvailabilityBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.AvailabilityBtn.UseVisualStyleBackColor = False
         '
-        'UpdateBtn
+        'UpdatePnl
         '
-        Me.UpdateBtn.BackColor = System.Drawing.Color.LightGray
-        Me.UpdateBtn.FlatAppearance.BorderSize = 0
-        Me.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.UpdateBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UpdateBtn.Location = New System.Drawing.Point(12, 255)
-        Me.UpdateBtn.Name = "UpdateBtn"
-        Me.UpdateBtn.Size = New System.Drawing.Size(154, 63)
-        Me.UpdateBtn.TabIndex = 6
-        Me.UpdateBtn.Text = "Update Info"
-        Me.UpdateBtn.UseVisualStyleBackColor = False
+        Me.UpdatePnl.BackColor = System.Drawing.Color.White
+        Me.UpdatePnl.Location = New System.Drawing.Point(172, 37)
+        Me.UpdatePnl.Name = "UpdatePnl"
+        Me.UpdatePnl.Size = New System.Drawing.Size(840, 527)
+        Me.UpdatePnl.TabIndex = 18
         '
         'LogoutLbl
         '
@@ -90,7 +91,7 @@ Partial Class Availablility
         Me.LogoutLbl.Location = New System.Drawing.Point(46, 527)
         Me.LogoutLbl.Name = "LogoutLbl"
         Me.LogoutLbl.Size = New System.Drawing.Size(71, 25)
-        Me.LogoutLbl.TabIndex = 24
+        Me.LogoutLbl.TabIndex = 23
         Me.LogoutLbl.Text = "Logout"
         '
         'SmsPb
@@ -100,7 +101,7 @@ Partial Class Availablility
         Me.SmsPb.Name = "SmsPb"
         Me.SmsPb.Size = New System.Drawing.Size(154, 83)
         Me.SmsPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.SmsPb.TabIndex = 7
+        Me.SmsPb.TabIndex = 22
         Me.SmsPb.TabStop = False
         '
         'ExitPb
@@ -110,27 +111,28 @@ Partial Class Availablility
         Me.ExitPb.Name = "ExitPb"
         Me.ExitPb.Size = New System.Drawing.Size(34, 31)
         Me.ExitPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ExitPb.TabIndex = 2
+        Me.ExitPb.TabIndex = 14
         Me.ExitPb.TabStop = False
         '
-        'Availablility
+        'Update
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
         Me.ClientSize = New System.Drawing.Size(1024, 576)
         Me.Controls.Add(Me.LogoutLbl)
         Me.Controls.Add(Me.SmsPb)
-        Me.Controls.Add(Me.UpdateBtn)
         Me.Controls.Add(Me.CancelBtn)
         Me.Controls.Add(Me.BookBtn)
+        Me.Controls.Add(Me.AvailabilityBtn)
+        Me.Controls.Add(Me.UpdatePnl)
         Me.Controls.Add(Me.ExitPb)
-        Me.Controls.Add(Me.AvailabilityPnl)
+        Me.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Availablility"
+        Me.Margin = New System.Windows.Forms.Padding(6)
+        Me.Name = "Update"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Availablility"
+        Me.Text = "Update"
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -138,11 +140,11 @@ Partial Class Availablility
 
     End Sub
 
-    Friend WithEvents AvailabilityPnl As Panel
     Friend WithEvents ExitPb As PictureBox
-    Friend WithEvents BookBtn As Button
-    Friend WithEvents CancelBtn As Button
-    Friend WithEvents UpdateBtn As Button
     Friend WithEvents SmsPb As PictureBox
+    Friend WithEvents CancelBtn As Button
+    Friend WithEvents BookBtn As Button
+    Friend WithEvents AvailabilityBtn As Button
+    Friend WithEvents UpdatePnl As Panel
     Friend WithEvents LogoutLbl As Label
 End Class

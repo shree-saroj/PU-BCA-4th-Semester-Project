@@ -1,4 +1,4 @@
-﻿Public Class Availablility
+﻿Public Class Book
     Private Sub ExitPb_MouseEnter(sender As Object, e As EventArgs) Handles ExitPb.MouseEnter
         ExitPb.BackColor = Color.Red
     End Sub
