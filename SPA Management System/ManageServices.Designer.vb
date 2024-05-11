@@ -26,7 +26,7 @@ Partial Class ManageServices
         Me.LogoutLbl = New System.Windows.Forms.Label()
         Me.ManageUsersBtn = New System.Windows.Forms.Button()
         Me.ViewCustomerInfoBtn = New System.Windows.Forms.Button()
-        Me.AvailabilityBtn = New System.Windows.Forms.Button()
+        Me.ViewTransactionsBtn = New System.Windows.Forms.Button()
         Me.AddUpdatePnl = New System.Windows.Forms.Panel()
         Me.ViewStatisticsBtn = New System.Windows.Forms.Button()
         Me.ManageEmployeesBtn = New System.Windows.Forms.Button()
@@ -74,19 +74,19 @@ Partial Class ManageServices
         Me.ViewCustomerInfoBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ViewCustomerInfoBtn.UseVisualStyleBackColor = False
         '
-        'AvailabilityBtn
+        'ViewTransactionsBtn
         '
-        Me.AvailabilityBtn.BackColor = System.Drawing.Color.LightGray
-        Me.AvailabilityBtn.FlatAppearance.BorderSize = 0
-        Me.AvailabilityBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AvailabilityBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AvailabilityBtn.Location = New System.Drawing.Point(12, 101)
-        Me.AvailabilityBtn.Name = "AvailabilityBtn"
-        Me.AvailabilityBtn.Size = New System.Drawing.Size(154, 63)
-        Me.AvailabilityBtn.TabIndex = 25
-        Me.AvailabilityBtn.Text = "View Transactions"
-        Me.AvailabilityBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.AvailabilityBtn.UseVisualStyleBackColor = False
+        Me.ViewTransactionsBtn.BackColor = System.Drawing.Color.LightGray
+        Me.ViewTransactionsBtn.FlatAppearance.BorderSize = 0
+        Me.ViewTransactionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ViewTransactionsBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ViewTransactionsBtn.Location = New System.Drawing.Point(12, 101)
+        Me.ViewTransactionsBtn.Name = "ViewTransactionsBtn"
+        Me.ViewTransactionsBtn.Size = New System.Drawing.Size(154, 63)
+        Me.ViewTransactionsBtn.TabIndex = 25
+        Me.ViewTransactionsBtn.Text = "View Transactions"
+        Me.ViewTransactionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ViewTransactionsBtn.UseVisualStyleBackColor = False
         '
         'AddUpdatePnl
         '
@@ -156,7 +156,7 @@ Partial Class ManageServices
         Me.Controls.Add(Me.SmsPb)
         Me.Controls.Add(Me.ManageUsersBtn)
         Me.Controls.Add(Me.ViewCustomerInfoBtn)
-        Me.Controls.Add(Me.AvailabilityBtn)
+        Me.Controls.Add(Me.ViewTransactionsBtn)
         Me.Controls.Add(Me.AddUpdatePnl)
         Me.Controls.Add(Me.ExitPb)
         Me.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -177,7 +177,7 @@ Partial Class ManageServices
     Friend WithEvents SmsPb As PictureBox
     Friend WithEvents ManageUsersBtn As Button
     Friend WithEvents ViewCustomerInfoBtn As Button
-    Friend WithEvents AvailabilityBtn As Button
+    Friend WithEvents ViewTransactionsBtn As Button
     Friend WithEvents AddUpdatePnl As Panel
     Friend WithEvents ViewStatisticsBtn As Button
     Friend WithEvents ManageEmployeesBtn As Button

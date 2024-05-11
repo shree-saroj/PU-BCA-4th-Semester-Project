@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManageEmployees.Designer.vb">
+      <DependentUpon>ManageEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ManageServices.Designer.vb">
       <DependentUpon>ManageServices.vb</DependentUpon>
     </Compile>
@@ -137,6 +143,12 @@
     <Compile Include="ViewCustomerInfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ViewStatistics.Designer.vb">
+      <DependentUpon>ViewStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStatistics.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ViewTransactions.Designer.vb">
       <DependentUpon>ViewTransactions.vb</DependentUpon>
     </Compile>
@@ -145,6 +157,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ManageEmployees.resx">
+      <DependentUpon>ManageEmployees.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageServices.resx">
       <DependentUpon>ManageServices.vb</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewCustomerInfo.resx">
       <DependentUpon>ViewCustomerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStatistics.resx">
+      <DependentUpon>ViewStatistics.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewTransactions.resx">
       <DependentUpon>ViewTransactions.vb</DependentUpon>

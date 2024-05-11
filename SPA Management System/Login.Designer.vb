@@ -24,7 +24,7 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.LoginPnl = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.LoginBtn = New System.Windows.Forms.Button()
         Me.PasswordLbl = New System.Windows.Forms.Label()
         Me.PasswordTb = New System.Windows.Forms.TextBox()
@@ -34,7 +34,7 @@ Partial Class Login
         Me.UserPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
         Me.LoginPnl.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -45,7 +45,7 @@ Partial Class Login
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LoginPnl.BackColor = System.Drawing.Color.Snow
-        Me.LoginPnl.Controls.Add(Me.PictureBox1)
+        Me.LoginPnl.Controls.Add(Me.SmsPb)
         Me.LoginPnl.Controls.Add(Me.LoginBtn)
         Me.LoginPnl.Controls.Add(Me.PasswordLbl)
         Me.LoginPnl.Controls.Add(Me.PasswordTb)
@@ -58,15 +58,15 @@ Partial Class Login
         Me.LoginPnl.Size = New System.Drawing.Size(824, 476)
         Me.LoginPnl.TabIndex = 0
         '
-        'PictureBox1
+        'SmsPb
         '
-        Me.PictureBox1.Image = Global.SPA_Management_System.My.Resources.Resources.spa_management_system_high_resolution_logo_transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(106, 32)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(180, 80)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
+        Me.SmsPb.Image = Global.SPA_Management_System.My.Resources.Resources.spa_management_system_high_resolution_logo_transparent
+        Me.SmsPb.Location = New System.Drawing.Point(106, 32)
+        Me.SmsPb.Name = "SmsPb"
+        Me.SmsPb.Size = New System.Drawing.Size(180, 80)
+        Me.SmsPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.SmsPb.TabIndex = 8
+        Me.SmsPb.TabStop = False
         '
         'LoginBtn
         '
@@ -164,7 +164,7 @@ Partial Class Login
         Me.Text = "Login"
         Me.LoginPnl.ResumeLayout(False)
         Me.LoginPnl.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -180,5 +180,5 @@ Partial Class Login
     Friend WithEvents UnameTb As TextBox
     Friend WithEvents SigninLbl As Label
     Friend WithEvents ExitPb As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents SmsPb As PictureBox
 End Class
