@@ -30,8 +30,10 @@ Partial Class ViewCustomerInfo
         Me.ViewTransactionsBtn = New System.Windows.Forms.Button()
         Me.ManageServicesBtn = New System.Windows.Forms.Button()
         Me.ViewCustomerInfoPnl = New System.Windows.Forms.Panel()
+        Me.ViewCustomerInfoLbl = New System.Windows.Forms.Label()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.ViewCustomerInfoPnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -119,10 +121,22 @@ Partial Class ViewCustomerInfo
         'ViewCustomerInfoPnl
         '
         Me.ViewCustomerInfoPnl.BackColor = System.Drawing.Color.White
+        Me.ViewCustomerInfoPnl.Controls.Add(Me.ViewCustomerInfoLbl)
         Me.ViewCustomerInfoPnl.Location = New System.Drawing.Point(172, 37)
         Me.ViewCustomerInfoPnl.Name = "ViewCustomerInfoPnl"
         Me.ViewCustomerInfoPnl.Size = New System.Drawing.Size(840, 527)
         Me.ViewCustomerInfoPnl.TabIndex = 40
+        '
+        'ViewCustomerInfoLbl
+        '
+        Me.ViewCustomerInfoLbl.AutoSize = True
+        Me.ViewCustomerInfoLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ViewCustomerInfoLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ViewCustomerInfoLbl.Location = New System.Drawing.Point(366, 4)
+        Me.ViewCustomerInfoLbl.Name = "ViewCustomerInfoLbl"
+        Me.ViewCustomerInfoLbl.Size = New System.Drawing.Size(135, 25)
+        Me.ViewCustomerInfoLbl.TabIndex = 57
+        Me.ViewCustomerInfoLbl.Text = "Customer Info"
         '
         'SmsPb
         '
@@ -165,6 +179,8 @@ Partial Class ViewCustomerInfo
         Me.Name = "ViewCustomerInfo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ViewCustomerInfo"
+        Me.ViewCustomerInfoPnl.ResumeLayout(False)
+        Me.ViewCustomerInfoPnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -181,4 +197,5 @@ Partial Class ViewCustomerInfo
     Friend WithEvents ViewTransactionsBtn As Button
     Friend WithEvents ManageServicesBtn As Button
     Friend WithEvents ViewCustomerInfoPnl As Panel
+    Friend WithEvents ViewCustomerInfoLbl As Label
 End Class

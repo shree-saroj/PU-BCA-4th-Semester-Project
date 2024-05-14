@@ -32,8 +32,10 @@ Partial Class ViewStatistics
         Me.ViewTransactionsBtn = New System.Windows.Forms.Button()
         Me.ManageServicesBtn = New System.Windows.Forms.Button()
         Me.ViewStatisticsPnl = New System.Windows.Forms.Panel()
+        Me.ViewStatisticsLbl = New System.Windows.Forms.Label()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ViewStatisticsPnl.SuspendLayout()
         Me.SuspendLayout()
         '
         'ExitPb
@@ -139,10 +141,22 @@ Partial Class ViewStatistics
         'ViewStatisticsPnl
         '
         Me.ViewStatisticsPnl.BackColor = System.Drawing.Color.White
+        Me.ViewStatisticsPnl.Controls.Add(Me.ViewStatisticsLbl)
         Me.ViewStatisticsPnl.Location = New System.Drawing.Point(172, 37)
         Me.ViewStatisticsPnl.Name = "ViewStatisticsPnl"
         Me.ViewStatisticsPnl.Size = New System.Drawing.Size(840, 527)
         Me.ViewStatisticsPnl.TabIndex = 64
+        '
+        'ViewStatisticsLbl
+        '
+        Me.ViewStatisticsLbl.AutoSize = True
+        Me.ViewStatisticsLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ViewStatisticsLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ViewStatisticsLbl.Location = New System.Drawing.Point(373, 4)
+        Me.ViewStatisticsLbl.Name = "ViewStatisticsLbl"
+        Me.ViewStatisticsLbl.Size = New System.Drawing.Size(88, 25)
+        Me.ViewStatisticsLbl.TabIndex = 58
+        Me.ViewStatisticsLbl.Text = "Statistics"
         '
         'ViewStatistics
         '
@@ -167,6 +181,8 @@ Partial Class ViewStatistics
         Me.Text = "ViewStatistics"
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ViewStatisticsPnl.ResumeLayout(False)
+        Me.ViewStatisticsPnl.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -181,4 +197,5 @@ Partial Class ViewStatistics
     Friend WithEvents ViewTransactionsBtn As Button
     Friend WithEvents ManageServicesBtn As Button
     Friend WithEvents ViewStatisticsPnl As Panel
+    Friend WithEvents ViewStatisticsLbl As Label
 End Class

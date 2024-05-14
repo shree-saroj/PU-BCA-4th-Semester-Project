@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>spa-management-system-high-resolution-logo-transparent.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -223,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\spa-management-system-high-resolution-logo-transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spa-management-system-high-resolution-logo-transparent.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

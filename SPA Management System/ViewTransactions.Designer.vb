@@ -30,8 +30,10 @@ Partial Class ViewTransactions
         Me.ViewCustomerInfoBtn = New System.Windows.Forms.Button()
         Me.ManageServicesBtn = New System.Windows.Forms.Button()
         Me.ViewTransactionsPnl = New System.Windows.Forms.Panel()
+        Me.ViewTransactionsLbl = New System.Windows.Forms.Label()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.ViewTransactionsPnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -119,10 +121,22 @@ Partial Class ViewTransactions
         'ViewTransactionsPnl
         '
         Me.ViewTransactionsPnl.BackColor = System.Drawing.Color.White
+        Me.ViewTransactionsPnl.Controls.Add(Me.ViewTransactionsLbl)
         Me.ViewTransactionsPnl.Location = New System.Drawing.Point(172, 37)
         Me.ViewTransactionsPnl.Name = "ViewTransactionsPnl"
         Me.ViewTransactionsPnl.Size = New System.Drawing.Size(840, 527)
         Me.ViewTransactionsPnl.TabIndex = 32
+        '
+        'ViewTransactionsLbl
+        '
+        Me.ViewTransactionsLbl.AutoSize = True
+        Me.ViewTransactionsLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ViewTransactionsLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ViewTransactionsLbl.Location = New System.Drawing.Point(372, 4)
+        Me.ViewTransactionsLbl.Name = "ViewTransactionsLbl"
+        Me.ViewTransactionsLbl.Size = New System.Drawing.Size(117, 25)
+        Me.ViewTransactionsLbl.TabIndex = 58
+        Me.ViewTransactionsLbl.Text = "Transactions"
         '
         'SmsPb
         '
@@ -165,6 +179,8 @@ Partial Class ViewTransactions
         Me.Name = "ViewTransactions"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ViewTransactions"
+        Me.ViewTransactionsPnl.ResumeLayout(False)
+        Me.ViewTransactionsPnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -181,4 +197,5 @@ Partial Class ViewTransactions
     Friend WithEvents ViewCustomerInfoBtn As Button
     Friend WithEvents ManageServicesBtn As Button
     Friend WithEvents ViewTransactionsPnl As Panel
+    Friend WithEvents ViewTransactionsLbl As Label
 End Class

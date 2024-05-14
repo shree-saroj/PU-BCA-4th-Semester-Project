@@ -27,9 +27,11 @@ Partial Class Cancel
         Me.BookBtn = New System.Windows.Forms.Button()
         Me.AvailabilityBtn = New System.Windows.Forms.Button()
         Me.CancelPnl = New System.Windows.Forms.Panel()
+        Me.CancelAppointmentLbl = New System.Windows.Forms.Label()
         Me.LogoutLbl = New System.Windows.Forms.Label()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.CancelPnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -78,10 +80,22 @@ Partial Class Cancel
         'CancelPnl
         '
         Me.CancelPnl.BackColor = System.Drawing.Color.White
+        Me.CancelPnl.Controls.Add(Me.CancelAppointmentLbl)
         Me.CancelPnl.Location = New System.Drawing.Point(172, 37)
         Me.CancelPnl.Name = "CancelPnl"
         Me.CancelPnl.Size = New System.Drawing.Size(840, 527)
         Me.CancelPnl.TabIndex = 12
+        '
+        'CancelAppointmentLbl
+        '
+        Me.CancelAppointmentLbl.AutoSize = True
+        Me.CancelAppointmentLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CancelAppointmentLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.CancelAppointmentLbl.Location = New System.Drawing.Point(346, 4)
+        Me.CancelAppointmentLbl.Name = "CancelAppointmentLbl"
+        Me.CancelAppointmentLbl.Size = New System.Drawing.Size(188, 25)
+        Me.CancelAppointmentLbl.TabIndex = 26
+        Me.CancelAppointmentLbl.Text = "Cancel Appointment"
         '
         'LogoutLbl
         '
@@ -133,6 +147,8 @@ Partial Class Cancel
         Me.Name = "Cancel"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "cancel"
+        Me.CancelPnl.ResumeLayout(False)
+        Me.CancelPnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -147,4 +163,5 @@ Partial Class Cancel
     Friend WithEvents ExitPb As PictureBox
     Friend WithEvents CancelPnl As Panel
     Friend WithEvents LogoutLbl As Label
+    Friend WithEvents CancelAppointmentLbl As Label
 End Class

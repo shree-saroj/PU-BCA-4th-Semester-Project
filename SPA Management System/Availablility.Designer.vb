@@ -24,12 +24,14 @@ Partial Class Availablility
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Availablility))
         Me.AvailabilityPnl = New System.Windows.Forms.Panel()
+        Me.CheckAppointmentLbl = New System.Windows.Forms.Label()
         Me.BookBtn = New System.Windows.Forms.Button()
         Me.CancelBtn = New System.Windows.Forms.Button()
         Me.UpdateBtn = New System.Windows.Forms.Button()
         Me.LogoutLbl = New System.Windows.Forms.Label()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.AvailabilityPnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -37,10 +39,22 @@ Partial Class Availablility
         'AvailabilityPnl
         '
         Me.AvailabilityPnl.BackColor = System.Drawing.Color.White
+        Me.AvailabilityPnl.Controls.Add(Me.CheckAppointmentLbl)
         Me.AvailabilityPnl.Location = New System.Drawing.Point(172, 37)
         Me.AvailabilityPnl.Name = "AvailabilityPnl"
         Me.AvailabilityPnl.Size = New System.Drawing.Size(840, 527)
         Me.AvailabilityPnl.TabIndex = 0
+        '
+        'CheckAppointmentLbl
+        '
+        Me.CheckAppointmentLbl.AutoSize = True
+        Me.CheckAppointmentLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckAppointmentLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.CheckAppointmentLbl.Location = New System.Drawing.Point(341, 4)
+        Me.CheckAppointmentLbl.Name = "CheckAppointmentLbl"
+        Me.CheckAppointmentLbl.Size = New System.Drawing.Size(183, 25)
+        Me.CheckAppointmentLbl.TabIndex = 0
+        Me.CheckAppointmentLbl.Text = "Check Appointment"
         '
         'BookBtn
         '
@@ -131,6 +145,8 @@ Partial Class Availablility
         Me.Name = "Availablility"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Availablility"
+        Me.AvailabilityPnl.ResumeLayout(False)
+        Me.AvailabilityPnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -145,4 +161,5 @@ Partial Class Availablility
     Friend WithEvents UpdateBtn As Button
     Friend WithEvents SmsPb As PictureBox
     Friend WithEvents LogoutLbl As Label
+    Friend WithEvents CheckAppointmentLbl As Label
 End Class

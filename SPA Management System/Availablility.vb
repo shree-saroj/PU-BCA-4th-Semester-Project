@@ -6,4 +6,30 @@
         ExitPb.BackColor = Color.YellowGreen
     End Sub
 
+    Private Sub ExitPb_Click(sender As Object, e As EventArgs) Handles ExitPb.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub BookBtn_Click(sender As Object, e As EventArgs) Handles BookBtn.Click
+        Dim BookAppointment As Book = New Book
+        BookAppointment.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub CancelBtn_Click(sender As Object, e As EventArgs) Handles CancelBtn.Click
+        Dim CancelAppointment As Cancel = New Cancel
+        CancelAppointment.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
+        Dim UpdateInfo As Update = New Update
+        UpdateInfo.Show()
+        Me.Hide()
+    End Sub
+    Private Sub LogoutLbl_Click(sender As Object, e As EventArgs) Handles LogoutLbl.Click
+        Dim Login As Login = New Login
+        Login.Show()
+        Me.Hide()
+    End Sub
 End Class

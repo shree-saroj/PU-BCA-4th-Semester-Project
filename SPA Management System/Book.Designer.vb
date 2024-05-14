@@ -24,12 +24,14 @@ Partial Class Book
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Book))
         Me.BookPnl = New System.Windows.Forms.Panel()
+        Me.BookAppointmentLbl = New System.Windows.Forms.Label()
         Me.UpdateBtn = New System.Windows.Forms.Button()
         Me.CancelBtn = New System.Windows.Forms.Button()
         Me.AvailabilityBtn = New System.Windows.Forms.Button()
         Me.LogoutLbl = New System.Windows.Forms.Label()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.BookPnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -37,10 +39,22 @@ Partial Class Book
         'BookPnl
         '
         Me.BookPnl.BackColor = System.Drawing.Color.White
+        Me.BookPnl.Controls.Add(Me.BookAppointmentLbl)
         Me.BookPnl.Location = New System.Drawing.Point(172, 37)
         Me.BookPnl.Name = "BookPnl"
         Me.BookPnl.Size = New System.Drawing.Size(840, 527)
         Me.BookPnl.TabIndex = 1
+        '
+        'BookAppointmentLbl
+        '
+        Me.BookAppointmentLbl.AutoSize = True
+        Me.BookAppointmentLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BookAppointmentLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.BookAppointmentLbl.Location = New System.Drawing.Point(341, 4)
+        Me.BookAppointmentLbl.Name = "BookAppointmentLbl"
+        Me.BookAppointmentLbl.Size = New System.Drawing.Size(174, 25)
+        Me.BookAppointmentLbl.TabIndex = 25
+        Me.BookAppointmentLbl.Text = "Book Appointment"
         '
         'UpdateBtn
         '
@@ -133,6 +147,8 @@ Partial Class Book
         Me.Name = "Book"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Book"
+        Me.BookPnl.ResumeLayout(False)
+        Me.BookPnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -147,4 +163,5 @@ Partial Class Book
     Friend WithEvents CancelBtn As Button
     Friend WithEvents AvailabilityBtn As Button
     Friend WithEvents LogoutLbl As Label
+    Friend WithEvents BookAppointmentLbl As Label
 End Class

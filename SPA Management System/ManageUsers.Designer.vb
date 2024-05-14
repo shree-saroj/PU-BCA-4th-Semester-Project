@@ -30,8 +30,10 @@ Partial Class ManageUsers
         Me.ViewTransactionsBtn = New System.Windows.Forms.Button()
         Me.ManageServicesBtn = New System.Windows.Forms.Button()
         Me.ManageUsersPnl = New System.Windows.Forms.Panel()
+        Me.ManageUsersLbl = New System.Windows.Forms.Label()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.ManageUsersPnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -119,10 +121,22 @@ Partial Class ManageUsers
         'ManageUsersPnl
         '
         Me.ManageUsersPnl.BackColor = System.Drawing.Color.White
+        Me.ManageUsersPnl.Controls.Add(Me.ManageUsersLbl)
         Me.ManageUsersPnl.Location = New System.Drawing.Point(172, 37)
         Me.ManageUsersPnl.Name = "ManageUsersPnl"
         Me.ManageUsersPnl.Size = New System.Drawing.Size(840, 527)
         Me.ManageUsersPnl.TabIndex = 48
+        '
+        'ManageUsersLbl
+        '
+        Me.ManageUsersLbl.AutoSize = True
+        Me.ManageUsersLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ManageUsersLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ManageUsersLbl.Location = New System.Drawing.Point(361, 4)
+        Me.ManageUsersLbl.Name = "ManageUsersLbl"
+        Me.ManageUsersLbl.Size = New System.Drawing.Size(133, 25)
+        Me.ManageUsersLbl.TabIndex = 56
+        Me.ManageUsersLbl.Text = "Manage Users"
         '
         'SmsPb
         '
@@ -165,6 +179,8 @@ Partial Class ManageUsers
         Me.Name = "ManageUsers"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ManageUsers"
+        Me.ManageUsersPnl.ResumeLayout(False)
+        Me.ManageUsersPnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -181,4 +197,5 @@ Partial Class ManageUsers
     Friend WithEvents ViewTransactionsBtn As Button
     Friend WithEvents ManageServicesBtn As Button
     Friend WithEvents ManageUsersPnl As Panel
+    Friend WithEvents ManageUsersLbl As Label
 End Class

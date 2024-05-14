@@ -32,6 +32,8 @@ Partial Class ManageEmployees
         Me.ManageEmployeesPnl = New System.Windows.Forms.Panel()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.ManageEmployeesLbl = New System.Windows.Forms.Label()
+        Me.ManageEmployeesPnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -119,6 +121,7 @@ Partial Class ManageEmployees
         'ManageEmployeesPnl
         '
         Me.ManageEmployeesPnl.BackColor = System.Drawing.Color.White
+        Me.ManageEmployeesPnl.Controls.Add(Me.ManageEmployeesLbl)
         Me.ManageEmployeesPnl.Location = New System.Drawing.Point(172, 37)
         Me.ManageEmployeesPnl.Name = "ManageEmployeesPnl"
         Me.ManageEmployeesPnl.Size = New System.Drawing.Size(840, 527)
@@ -144,6 +147,17 @@ Partial Class ManageEmployees
         Me.ExitPb.TabIndex = 19
         Me.ExitPb.TabStop = False
         '
+        'ManageEmployeesLbl
+        '
+        Me.ManageEmployeesLbl.AutoSize = True
+        Me.ManageEmployeesLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ManageEmployeesLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ManageEmployeesLbl.Location = New System.Drawing.Point(345, 4)
+        Me.ManageEmployeesLbl.Name = "ManageEmployeesLbl"
+        Me.ManageEmployeesLbl.Size = New System.Drawing.Size(179, 25)
+        Me.ManageEmployeesLbl.TabIndex = 27
+        Me.ManageEmployeesLbl.Text = "Manage Employees"
+        '
         'ManageEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
@@ -165,6 +179,8 @@ Partial Class ManageEmployees
         Me.Name = "ManageEmployees"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ManageEmployees"
+        Me.ManageEmployeesPnl.ResumeLayout(False)
+        Me.ManageEmployeesPnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -181,4 +197,5 @@ Partial Class ManageEmployees
     Friend WithEvents ViewTransactionsBtn As Button
     Friend WithEvents ManageServicesBtn As Button
     Friend WithEvents ManageEmployeesPnl As Panel
+    Friend WithEvents ManageEmployeesLbl As Label
 End Class

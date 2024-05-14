@@ -28,10 +28,12 @@ Partial Class ManageServices
         Me.ViewCustomerInfoBtn = New System.Windows.Forms.Button()
         Me.ViewTransactionsBtn = New System.Windows.Forms.Button()
         Me.AddUpdatePnl = New System.Windows.Forms.Panel()
+        Me.ManageServiesLbl = New System.Windows.Forms.Label()
         Me.ViewStatisticsBtn = New System.Windows.Forms.Button()
         Me.ManageEmployeesBtn = New System.Windows.Forms.Button()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.AddUpdatePnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -91,10 +93,22 @@ Partial Class ManageServices
         'AddUpdatePnl
         '
         Me.AddUpdatePnl.BackColor = System.Drawing.Color.White
+        Me.AddUpdatePnl.Controls.Add(Me.ManageServiesLbl)
         Me.AddUpdatePnl.Location = New System.Drawing.Point(172, 37)
         Me.AddUpdatePnl.Name = "AddUpdatePnl"
         Me.AddUpdatePnl.Size = New System.Drawing.Size(840, 527)
         Me.AddUpdatePnl.TabIndex = 24
+        '
+        'ManageServiesLbl
+        '
+        Me.ManageServiesLbl.AutoSize = True
+        Me.ManageServiesLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ManageServiesLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ManageServiesLbl.Location = New System.Drawing.Point(370, 4)
+        Me.ManageServiesLbl.Name = "ManageServiesLbl"
+        Me.ManageServiesLbl.Size = New System.Drawing.Size(156, 25)
+        Me.ManageServiesLbl.TabIndex = 32
+        Me.ManageServiesLbl.Text = "Manage Services"
         '
         'ViewStatisticsBtn
         '
@@ -165,6 +179,8 @@ Partial Class ManageServices
         Me.Name = "ManageServices"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AddUpdate"
+        Me.AddUpdatePnl.ResumeLayout(False)
+        Me.AddUpdatePnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -181,4 +197,5 @@ Partial Class ManageServices
     Friend WithEvents AddUpdatePnl As Panel
     Friend WithEvents ViewStatisticsBtn As Button
     Friend WithEvents ManageEmployeesBtn As Button
+    Friend WithEvents ManageServiesLbl As Label
 End Class
