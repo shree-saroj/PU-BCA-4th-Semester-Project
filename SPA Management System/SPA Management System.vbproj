@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalVariables.vb" />
     <Compile Include="ManageEmployees.Designer.vb">
       <DependentUpon>ManageEmployees.vb</DependentUpon>
     </Compile>

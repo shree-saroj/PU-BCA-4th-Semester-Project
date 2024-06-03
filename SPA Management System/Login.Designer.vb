@@ -24,6 +24,7 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.LoginPnl = New System.Windows.Forms.Panel()
+        Me.HideShowChkB = New System.Windows.Forms.CheckBox()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.LoginBtn = New System.Windows.Forms.Button()
         Me.PasswordLbl = New System.Windows.Forms.Label()
@@ -45,6 +46,7 @@ Partial Class Login
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LoginPnl.BackColor = System.Drawing.Color.Snow
+        Me.LoginPnl.Controls.Add(Me.HideShowChkB)
         Me.LoginPnl.Controls.Add(Me.SmsPb)
         Me.LoginPnl.Controls.Add(Me.LoginBtn)
         Me.LoginPnl.Controls.Add(Me.PasswordLbl)
@@ -57,6 +59,15 @@ Partial Class Login
         Me.LoginPnl.Name = "LoginPnl"
         Me.LoginPnl.Size = New System.Drawing.Size(824, 476)
         Me.LoginPnl.TabIndex = 0
+        '
+        'HideShowChkB
+        '
+        Me.HideShowChkB.AutoSize = True
+        Me.HideShowChkB.Location = New System.Drawing.Point(727, 259)
+        Me.HideShowChkB.Name = "HideShowChkB"
+        Me.HideShowChkB.Size = New System.Drawing.Size(15, 14)
+        Me.HideShowChkB.TabIndex = 9
+        Me.HideShowChkB.UseVisualStyleBackColor = True
         '
         'SmsPb
         '
@@ -181,4 +192,5 @@ Partial Class Login
     Friend WithEvents SigninLbl As Label
     Friend WithEvents ExitPb As PictureBox
     Friend WithEvents SmsPb As PictureBox
+    Friend WithEvents HideShowChkB As CheckBox
 End Class
