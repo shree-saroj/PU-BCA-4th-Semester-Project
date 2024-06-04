@@ -108,6 +108,7 @@ Partial Class Login
         '
         Me.PasswordTb.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PasswordTb.Location = New System.Drawing.Point(478, 250)
+        Me.PasswordTb.MaxLength = 49
         Me.PasswordTb.Name = "PasswordTb"
         Me.PasswordTb.Size = New System.Drawing.Size(276, 32)
         Me.PasswordTb.TabIndex = 5

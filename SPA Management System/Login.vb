@@ -26,7 +26,7 @@ Public Class Login
         }
         Dim CmdType As CommandType = CommandType.StoredProcedure
         Dim LoginResult = GlobalVariables.Login(Query, Param, CmdType)
-        If UnameTb.Text = "" And PasswordTb.Text = "" Then
+        If UnameTb.Text = "" Or PasswordTb.Text = "" Then
             MsgBox("Enter UserName and Password")
         ElseIf LoginResult = 1 Then
             Dim ManageServices As New ManageServices

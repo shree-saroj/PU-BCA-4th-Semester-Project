@@ -22,18 +22,33 @@ Partial Class ManageServices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManageServices))
         Me.LogoutLbl = New System.Windows.Forms.Label()
         Me.ManageUsersBtn = New System.Windows.Forms.Button()
         Me.ViewCustomerInfoBtn = New System.Windows.Forms.Button()
         Me.ViewTransactionsBtn = New System.Windows.Forms.Button()
         Me.AddUpdatePnl = New System.Windows.Forms.Panel()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.SRemoveBtn = New System.Windows.Forms.Button()
+        Me.SUpdateBtn = New System.Windows.Forms.Button()
+        Me.SAddBtn = New System.Windows.Forms.Button()
+        Me.ResetBtn = New System.Windows.Forms.Button()
+        Me.STimeLbl = New System.Windows.Forms.Label()
+        Me.SPriceTb = New System.Windows.Forms.TextBox()
+        Me.SPrice = New System.Windows.Forms.Label()
+        Me.SNameTb = New System.Windows.Forms.TextBox()
+        Me.SNameLbl = New System.Windows.Forms.Label()
         Me.ManageServiesLbl = New System.Windows.Forms.Label()
         Me.ViewStatisticsBtn = New System.Windows.Forms.Button()
         Me.ManageEmployeesBtn = New System.Windows.Forms.Button()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
         Me.AddUpdatePnl.SuspendLayout()
+        CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -93,11 +108,169 @@ Partial Class ManageServices
         'AddUpdatePnl
         '
         Me.AddUpdatePnl.BackColor = System.Drawing.Color.White
+        Me.AddUpdatePnl.Controls.Add(Me.DateTimePicker1)
+        Me.AddUpdatePnl.Controls.Add(Me.Guna2DataGridView1)
+        Me.AddUpdatePnl.Controls.Add(Me.SRemoveBtn)
+        Me.AddUpdatePnl.Controls.Add(Me.SUpdateBtn)
+        Me.AddUpdatePnl.Controls.Add(Me.SAddBtn)
+        Me.AddUpdatePnl.Controls.Add(Me.ResetBtn)
+        Me.AddUpdatePnl.Controls.Add(Me.STimeLbl)
+        Me.AddUpdatePnl.Controls.Add(Me.SPriceTb)
+        Me.AddUpdatePnl.Controls.Add(Me.SPrice)
+        Me.AddUpdatePnl.Controls.Add(Me.SNameTb)
+        Me.AddUpdatePnl.Controls.Add(Me.SNameLbl)
         Me.AddUpdatePnl.Controls.Add(Me.ManageServiesLbl)
         Me.AddUpdatePnl.Location = New System.Drawing.Point(172, 37)
         Me.AddUpdatePnl.Name = "AddUpdatePnl"
         Me.AddUpdatePnl.Size = New System.Drawing.Size(840, 527)
         Me.AddUpdatePnl.TabIndex = 24
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePicker1.Location = New System.Drawing.Point(154, 77)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(181, 33)
+        Me.DateTimePicker1.TabIndex = 59
+        '
+        'Guna2DataGridView1
+        '
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.Guna2DataGridView1.ColumnHeadersHeight = 4
+        Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2DataGridView1.Location = New System.Drawing.Point(95, 209)
+        Me.Guna2DataGridView1.Name = "Guna2DataGridView1"
+        Me.Guna2DataGridView1.RowHeadersVisible = False
+        Me.Guna2DataGridView1.Size = New System.Drawing.Size(669, 306)
+        Me.Guna2DataGridView1.TabIndex = 58
+        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.Guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.Guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4
+        Me.Guna2DataGridView1.ThemeStyle.ReadOnly = False
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'SRemoveBtn
+        '
+        Me.SRemoveBtn.BackColor = System.Drawing.Color.Yellow
+        Me.SRemoveBtn.FlatAppearance.BorderSize = 0
+        Me.SRemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SRemoveBtn.Location = New System.Drawing.Point(375, 149)
+        Me.SRemoveBtn.Name = "SRemoveBtn"
+        Me.SRemoveBtn.Size = New System.Drawing.Size(184, 39)
+        Me.SRemoveBtn.TabIndex = 57
+        Me.SRemoveBtn.Text = "Remove Service"
+        Me.SRemoveBtn.UseVisualStyleBackColor = False
+        '
+        'SUpdateBtn
+        '
+        Me.SUpdateBtn.BackColor = System.Drawing.Color.Yellow
+        Me.SUpdateBtn.FlatAppearance.BorderSize = 0
+        Me.SUpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SUpdateBtn.Location = New System.Drawing.Point(375, 95)
+        Me.SUpdateBtn.Name = "SUpdateBtn"
+        Me.SUpdateBtn.Size = New System.Drawing.Size(184, 39)
+        Me.SUpdateBtn.TabIndex = 56
+        Me.SUpdateBtn.Text = "Edit Info"
+        Me.SUpdateBtn.UseVisualStyleBackColor = False
+        '
+        'SAddBtn
+        '
+        Me.SAddBtn.BackColor = System.Drawing.Color.Yellow
+        Me.SAddBtn.FlatAppearance.BorderSize = 0
+        Me.SAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SAddBtn.Location = New System.Drawing.Point(375, 39)
+        Me.SAddBtn.Name = "SAddBtn"
+        Me.SAddBtn.Size = New System.Drawing.Size(184, 39)
+        Me.SAddBtn.TabIndex = 55
+        Me.SAddBtn.Text = "Add Service"
+        Me.SAddBtn.UseVisualStyleBackColor = False
+        '
+        'ResetBtn
+        '
+        Me.ResetBtn.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.ResetBtn.FlatAppearance.BorderSize = 0
+        Me.ResetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ResetBtn.Location = New System.Drawing.Point(154, 155)
+        Me.ResetBtn.Name = "ResetBtn"
+        Me.ResetBtn.Size = New System.Drawing.Size(181, 33)
+        Me.ResetBtn.TabIndex = 54
+        Me.ResetBtn.Text = "Reset"
+        Me.ResetBtn.UseVisualStyleBackColor = False
+        '
+        'STimeLbl
+        '
+        Me.STimeLbl.AutoSize = True
+        Me.STimeLbl.Location = New System.Drawing.Point(17, 81)
+        Me.STimeLbl.Name = "STimeLbl"
+        Me.STimeLbl.Size = New System.Drawing.Size(122, 25)
+        Me.STimeLbl.TabIndex = 52
+        Me.STimeLbl.Text = "Service Time:"
+        '
+        'SPriceTb
+        '
+        Me.SPriceTb.Location = New System.Drawing.Point(154, 117)
+        Me.SPriceTb.Name = "SPriceTb"
+        Me.SPriceTb.Size = New System.Drawing.Size(181, 33)
+        Me.SPriceTb.TabIndex = 51
+        '
+        'SPrice
+        '
+        Me.SPrice.AutoSize = True
+        Me.SPrice.Location = New System.Drawing.Point(90, 120)
+        Me.SPrice.Name = "SPrice"
+        Me.SPrice.Size = New System.Drawing.Size(58, 25)
+        Me.SPrice.TabIndex = 46
+        Me.SPrice.Text = "Price:"
+        '
+        'SNameTb
+        '
+        Me.SNameTb.Location = New System.Drawing.Point(154, 39)
+        Me.SNameTb.Name = "SNameTb"
+        Me.SNameTb.Size = New System.Drawing.Size(181, 33)
+        Me.SNameTb.TabIndex = 45
+        '
+        'SNameLbl
+        '
+        Me.SNameLbl.AutoSize = True
+        Me.SNameLbl.Location = New System.Drawing.Point(17, 42)
+        Me.SNameLbl.Name = "SNameLbl"
+        Me.SNameLbl.Size = New System.Drawing.Size(131, 25)
+        Me.SNameLbl.TabIndex = 44
+        Me.SNameLbl.Text = "Service Name:"
         '
         'ManageServiesLbl
         '
@@ -140,7 +313,7 @@ Partial Class ManageServices
         '
         'SmsPb
         '
-        Me.SmsPb.Image = Global.SPA_Management_System.My.Resources.Resources.spa_management_system_high_resolution_logo_transparent
+        Me.SmsPb.Image = CType(resources.GetObject("SmsPb.Image"), System.Drawing.Image)
         Me.SmsPb.Location = New System.Drawing.Point(12, 12)
         Me.SmsPb.Name = "SmsPb"
         Me.SmsPb.Size = New System.Drawing.Size(154, 83)
@@ -181,6 +354,7 @@ Partial Class ManageServices
         Me.Text = "AddUpdate"
         Me.AddUpdatePnl.ResumeLayout(False)
         Me.AddUpdatePnl.PerformLayout()
+        CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -198,4 +372,15 @@ Partial Class ManageServices
     Friend WithEvents ViewStatisticsBtn As Button
     Friend WithEvents ManageEmployeesBtn As Button
     Friend WithEvents ManageServiesLbl As Label
+    Friend WithEvents ResetBtn As Button
+    Friend WithEvents STimeLbl As Label
+    Friend WithEvents SPriceTb As TextBox
+    Friend WithEvents SPrice As Label
+    Friend WithEvents SNameTb As TextBox
+    Friend WithEvents SNameLbl As Label
+    Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents SRemoveBtn As Button
+    Friend WithEvents SUpdateBtn As Button
+    Friend WithEvents SAddBtn As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
