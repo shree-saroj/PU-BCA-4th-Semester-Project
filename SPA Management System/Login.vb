@@ -40,6 +40,7 @@ Public Class Login
             MsgBox("Wrong UserName and Passwrod")
             UnameTb.Text = ""
             PasswordTb.Text = ""
+            HideShowChkB.Checked = False
         End If
 
     End Sub

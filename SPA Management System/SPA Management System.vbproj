@@ -183,10 +183,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SpaMgtSysDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SpaMgtSysDataSet1.Designer.vb">
+    <Compile Include="SpaMgtSysDataSet11.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SpaMgtSysDataSet1.xsd</DependentUpon>
+      <DependentUpon>SpaMgtSysDataSet11.xsd</DependentUpon>
     </Compile>
     <Compile Include="SpaMgtSysDataSet2.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -197,6 +197,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SpaMgtSysDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpaMgtSysDataSet3.vb">
+      <DependentUpon>SpaMgtSysDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpaMgtSysDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="Update.Designer.vb">
       <DependentUpon>Update.vb</DependentUpon>
@@ -287,16 +295,16 @@
     <None Include="SpaMgtSysDataSet.xss">
       <DependentUpon>SpaMgtSysDataSet.xsd</DependentUpon>
     </None>
-    <None Include="SpaMgtSysDataSet1.xsc">
-      <DependentUpon>SpaMgtSysDataSet1.xsd</DependentUpon>
+    <None Include="SpaMgtSysDataSet11.xsc">
+      <DependentUpon>SpaMgtSysDataSet11.xsd</DependentUpon>
     </None>
-    <None Include="SpaMgtSysDataSet1.xsd">
+    <None Include="SpaMgtSysDataSet11.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SpaMgtSysDataSet1.Designer.vb</LastGenOutput>
+      <LastGenOutput>SpaMgtSysDataSet11.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SpaMgtSysDataSet1.xss">
-      <DependentUpon>SpaMgtSysDataSet1.xsd</DependentUpon>
+    <None Include="SpaMgtSysDataSet11.xss">
+      <DependentUpon>SpaMgtSysDataSet11.xsd</DependentUpon>
     </None>
     <None Include="SpaMgtSysDataSet2.xsc">
       <DependentUpon>SpaMgtSysDataSet2.xsd</DependentUpon>
@@ -319,6 +327,17 @@
     </None>
     <None Include="SpaMgtSysDataSet3.xss">
       <DependentUpon>SpaMgtSysDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet4.xsc">
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpaMgtSysDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpaMgtSysDataSet4.xss">
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

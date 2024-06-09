@@ -48,7 +48,7 @@ Public Class ManageEmployees
             MsgBox("Missing Information")
         ElseIf GlobalVariables.Key > 0 Then
             Reset()
-            MsgBox("Exception Occured Try Again")
+            MsgBox("Key Exception Occured! Try Again")
         Else
             Dim Query As String = "Usp_Add_Employee"
             Dim Param As New List(Of SqlParameter) From {
@@ -61,20 +61,18 @@ Public Class ManageEmployees
             }
             Dim CmdType As CommandType = CommandType.StoredProcedure
             Dim AddEmpResult = GlobalVariables.InsertUpdateDelete(Query, Param, CmdType)
-            If EFNameTb.Text = "" Or ELNameTb.Text = "" Or EAddressTb.Text = "" Or EContactTb.Text = "" Or EPostTb.Text = "" Then
-                MsgBox("Missing Information")
-            ElseIf AddEmpResult = -1 Then
-                MsgBox("Exception Occured Try Again")
-                Reset()
-            Else
-                Me.Usp_View_EmployeesTableAdapter1.Fill(Me.SpaMgtSysDataSet1.Usp_View_Employees)
+            If AddEmpResult = -1 Then
+                    MsgBox("DataBase Exeption Occured! Try Again")
+                    Reset()
+                Else
+                    Me.Usp_View_EmployeesTableAdapter.Fill(Me.SpaMgtSysDataSet1.Usp_View_Employees)
                 MsgBox("Employee Added Sucessfully")
             End If
         End If
     End Sub
     Private Sub ManageEmployees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'SpaMgtSysDataSet1.Usp_View_Employees' table. You can move, or remove it, as needed.
-        Me.Usp_View_EmployeesTableAdapter1.Fill(Me.SpaMgtSysDataSet1.Usp_View_Employees)
+        Me.Usp_View_EmployeesTableAdapter.Fill(Me.SpaMgtSysDataSet1.Usp_View_Employees)
         Reset()
     End Sub
     Private Sub Reset()
@@ -125,10 +123,10 @@ Public Class ManageEmployees
             Dim UpdateEmpResult = GlobalVariables.InsertUpdateDelete(Query, Param, CmdType)
 
             If UpdateEmpResult = -1 Then
-                MsgBox("Exception Occured Try Again")
+                MsgBox("DataBase Exception Occured! Try Again")
                 Reset()
             Else
-                Me.Usp_View_EmployeesTableAdapter1.Fill(Me.SpaMgtSysDataSet1.Usp_View_Employees)
+                Me.Usp_View_EmployeesTableAdapter.Fill(Me.SpaMgtSysDataSet1.Usp_View_Employees)
                 MsgBox("Employee Info Updated Sucessfully")
             End If
         End If
@@ -149,9 +147,11 @@ Public Class ManageEmployees
                 MsgBox("Exception Occured Try Again")
                 Reset()
             Else
-                Me.Usp_View_EmployeesTableAdapter1.Fill(Me.SpaMgtSysDataSet1.Usp_View_Employees)
+                Me.Usp_View_EmployeesTableAdapter.Fill(Me.SpaMgtSysDataSet1.Usp_View_Employees)
                 MsgBox("Employee Removed Sucessfully")
+                Reset()
             End If
         End If
     End Sub
+
 End Class

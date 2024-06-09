@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="UspViewEmployeesBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>795, 17</value>
+  <metadata name="UspViewEmployeesBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>175, 54</value>
   </metadata>
   <metadata name="SpaMgtSysDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>637, 17</value>
+    <value>17, 54</value>
+  </metadata>
+  <metadata name="UspViewEmployeesBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>795, 17</value>
   </metadata>
   <metadata name="UspViewEmployeesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>169, 17</value>
@@ -130,7 +133,7 @@
   <data name="SmsPb.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB9AAAAL/CAYAAAA++lw9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAA/7JJREFUeF7s3Q+oZXW9//8zM6WI2v8/M6Zn2p/1WefstY9TovX1Itig914tDAuk
+        DAAACwwBP0AiyAAA/7JJREFUeF7s3Q+oZXW9//8zM6WI2v8/M6Zn2p/1WefstY9TovX1Itig914tDAuk
         bkVify4jopFXIrFiKK6UhXgrEQwrk7AyBkRiQBrCkDTEzJDEEEWktBQZVMxRnJnf7/3eZ0+z58xrztl/
         1v/9/MCDmVlzzlrvz2f92Wuv9/p8PnMfvuR/AAAAAAAAAAAAAACYeXIhAAAAAAAAAAAAAACzRi4EAAAA
         AAAAAAAAAGDWyIUAAAAAAAAAAAAAAMwauRAAAAAAAAAAAAAAgFkjFwIAAAAAAAAAAAAAMGvkQgAAAAAA
@@ -1777,7 +1780,7 @@
         AAAAAAAAAAAAAAAAyjpz5r/DjSEiKshWpQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Usp_View_EmployeesTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1034, 17</value>
+  <metadata name="Usp_View_EmployeesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>414, 54</value>
   </metadata>
 </root>

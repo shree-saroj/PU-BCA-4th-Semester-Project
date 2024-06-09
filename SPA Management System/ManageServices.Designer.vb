@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ManageServices
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,26 +20,30 @@ Partial Class ManageServices
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManageServices))
         Me.LogoutLbl = New System.Windows.Forms.Label()
         Me.ManageUsersBtn = New System.Windows.Forms.Button()
         Me.ViewCustomerInfoBtn = New System.Windows.Forms.Button()
         Me.ViewTransactionsBtn = New System.Windows.Forms.Button()
         Me.AddUpdatePnl = New System.Windows.Forms.Panel()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.EmployeeDGV = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ServiceNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UspViewServicesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SpaMgtSysDataSet2 = New SPA_Management_System.SpaMgtSysDataSet2()
         Me.SRemoveBtn = New System.Windows.Forms.Button()
         Me.SUpdateBtn = New System.Windows.Forms.Button()
         Me.SAddBtn = New System.Windows.Forms.Button()
         Me.ResetBtn = New System.Windows.Forms.Button()
-        Me.STimeLbl = New System.Windows.Forms.Label()
         Me.SPriceTb = New System.Windows.Forms.TextBox()
-        Me.SPrice = New System.Windows.Forms.Label()
+        Me.SPriceLbl = New System.Windows.Forms.Label()
         Me.SNameTb = New System.Windows.Forms.TextBox()
         Me.SNameLbl = New System.Windows.Forms.Label()
         Me.ManageServiesLbl = New System.Windows.Forms.Label()
@@ -47,8 +51,11 @@ Partial Class ManageServices
         Me.ManageEmployeesBtn = New System.Windows.Forms.Button()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.Usp_View_ServicesTableAdapter = New SPA_Management_System.SpaMgtSysDataSet2TableAdapters.Usp_View_ServicesTableAdapter()
         Me.AddUpdatePnl.SuspendLayout()
-        CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeeDGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UspViewServicesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpaMgtSysDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -108,15 +115,13 @@ Partial Class ManageServices
         'AddUpdatePnl
         '
         Me.AddUpdatePnl.BackColor = System.Drawing.Color.White
-        Me.AddUpdatePnl.Controls.Add(Me.DateTimePicker1)
-        Me.AddUpdatePnl.Controls.Add(Me.Guna2DataGridView1)
+        Me.AddUpdatePnl.Controls.Add(Me.EmployeeDGV)
         Me.AddUpdatePnl.Controls.Add(Me.SRemoveBtn)
         Me.AddUpdatePnl.Controls.Add(Me.SUpdateBtn)
         Me.AddUpdatePnl.Controls.Add(Me.SAddBtn)
         Me.AddUpdatePnl.Controls.Add(Me.ResetBtn)
-        Me.AddUpdatePnl.Controls.Add(Me.STimeLbl)
         Me.AddUpdatePnl.Controls.Add(Me.SPriceTb)
-        Me.AddUpdatePnl.Controls.Add(Me.SPrice)
+        Me.AddUpdatePnl.Controls.Add(Me.SPriceLbl)
         Me.AddUpdatePnl.Controls.Add(Me.SNameTb)
         Me.AddUpdatePnl.Controls.Add(Me.SNameLbl)
         Me.AddUpdatePnl.Controls.Add(Me.ManageServiesLbl)
@@ -125,72 +130,107 @@ Partial Class ManageServices
         Me.AddUpdatePnl.Size = New System.Drawing.Size(840, 527)
         Me.AddUpdatePnl.TabIndex = 24
         '
-        'DateTimePicker1
+        'EmployeeDGV
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker1.Location = New System.Drawing.Point(154, 77)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(181, 33)
-        Me.DateTimePicker1.TabIndex = 59
+        Me.EmployeeDGV.AllowUserToAddRows = False
+        Me.EmployeeDGV.AllowUserToDeleteRows = False
+        Me.EmployeeDGV.AllowUserToResizeColumns = False
+        Me.EmployeeDGV.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.EmployeeDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.EmployeeDGV.AutoGenerateColumns = False
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EmployeeDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.EmployeeDGV.ColumnHeadersHeight = 30
+        Me.EmployeeDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.ServiceNameDataGridViewTextBoxColumn, Me.CostDataGridViewTextBoxColumn})
+        Me.EmployeeDGV.DataSource = Me.UspViewServicesBindingSource
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EmployeeDGV.DefaultCellStyle = DataGridViewCellStyle3
+        Me.EmployeeDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EmployeeDGV.Location = New System.Drawing.Point(22, 171)
+        Me.EmployeeDGV.Name = "EmployeeDGV"
+        Me.EmployeeDGV.ReadOnly = True
+        Me.EmployeeDGV.RowHeadersVisible = False
+        Me.EmployeeDGV.RowTemplate.Height = 30
+        Me.EmployeeDGV.RowTemplate.ReadOnly = True
+        Me.EmployeeDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EmployeeDGV.Size = New System.Drawing.Size(795, 344)
+        Me.EmployeeDGV.TabIndex = 58
+        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.EmployeeDGV.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.EmployeeDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EmployeeDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EmployeeDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.EmployeeDGV.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmployeeDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.EmployeeDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.EmployeeDGV.ThemeStyle.HeaderStyle.Height = 30
+        Me.EmployeeDGV.ThemeStyle.ReadOnly = True
+        Me.EmployeeDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.EmployeeDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.EmployeeDGV.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmployeeDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.EmployeeDGV.ThemeStyle.RowsStyle.Height = 30
+        Me.EmployeeDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EmployeeDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'Guna2DataGridView1
+        'IDDataGridViewTextBoxColumn
         '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.Guna2DataGridView1.ColumnHeadersHeight = 4
-        Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
-        Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2DataGridView1.Location = New System.Drawing.Point(95, 209)
-        Me.Guna2DataGridView1.Name = "Guna2DataGridView1"
-        Me.Guna2DataGridView1.RowHeadersVisible = False
-        Me.Guna2DataGridView1.Size = New System.Drawing.Size(669, 306)
-        Me.Guna2DataGridView1.TabIndex = 58
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.Guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4
-        Me.Guna2DataGridView1.ThemeStyle.ReadOnly = False
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.FillWeight = 50.0!
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ServiceNameDataGridViewTextBoxColumn
+        '
+        Me.ServiceNameDataGridViewTextBoxColumn.DataPropertyName = "Service Name"
+        Me.ServiceNameDataGridViewTextBoxColumn.HeaderText = "Service Name"
+        Me.ServiceNameDataGridViewTextBoxColumn.Name = "ServiceNameDataGridViewTextBoxColumn"
+        Me.ServiceNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CostDataGridViewTextBoxColumn
+        '
+        Me.CostDataGridViewTextBoxColumn.DataPropertyName = "Cost"
+        Me.CostDataGridViewTextBoxColumn.FillWeight = 30.0!
+        Me.CostDataGridViewTextBoxColumn.HeaderText = "Cost"
+        Me.CostDataGridViewTextBoxColumn.Name = "CostDataGridViewTextBoxColumn"
+        Me.CostDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UspViewServicesBindingSource
+        '
+        Me.UspViewServicesBindingSource.DataMember = "Usp_View_Services"
+        Me.UspViewServicesBindingSource.DataSource = Me.SpaMgtSysDataSet2
+        '
+        'SpaMgtSysDataSet2
+        '
+        Me.SpaMgtSysDataSet2.DataSetName = "SpaMgtSysDataSet2"
+        Me.SpaMgtSysDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'SRemoveBtn
         '
         Me.SRemoveBtn.BackColor = System.Drawing.Color.Yellow
         Me.SRemoveBtn.FlatAppearance.BorderSize = 0
         Me.SRemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SRemoveBtn.Location = New System.Drawing.Point(375, 149)
+        Me.SRemoveBtn.Location = New System.Drawing.Point(417, 119)
         Me.SRemoveBtn.Name = "SRemoveBtn"
-        Me.SRemoveBtn.Size = New System.Drawing.Size(184, 39)
+        Me.SRemoveBtn.Size = New System.Drawing.Size(184, 34)
         Me.SRemoveBtn.TabIndex = 57
         Me.SRemoveBtn.Text = "Remove Service"
         Me.SRemoveBtn.UseVisualStyleBackColor = False
@@ -200,9 +240,9 @@ Partial Class ManageServices
         Me.SUpdateBtn.BackColor = System.Drawing.Color.Yellow
         Me.SUpdateBtn.FlatAppearance.BorderSize = 0
         Me.SUpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SUpdateBtn.Location = New System.Drawing.Point(375, 95)
+        Me.SUpdateBtn.Location = New System.Drawing.Point(417, 79)
         Me.SUpdateBtn.Name = "SUpdateBtn"
-        Me.SUpdateBtn.Size = New System.Drawing.Size(184, 39)
+        Me.SUpdateBtn.Size = New System.Drawing.Size(184, 34)
         Me.SUpdateBtn.TabIndex = 56
         Me.SUpdateBtn.Text = "Edit Info"
         Me.SUpdateBtn.UseVisualStyleBackColor = False
@@ -212,9 +252,9 @@ Partial Class ManageServices
         Me.SAddBtn.BackColor = System.Drawing.Color.Yellow
         Me.SAddBtn.FlatAppearance.BorderSize = 0
         Me.SAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SAddBtn.Location = New System.Drawing.Point(375, 39)
+        Me.SAddBtn.Location = New System.Drawing.Point(417, 39)
         Me.SAddBtn.Name = "SAddBtn"
-        Me.SAddBtn.Size = New System.Drawing.Size(184, 39)
+        Me.SAddBtn.Size = New System.Drawing.Size(184, 34)
         Me.SAddBtn.TabIndex = 55
         Me.SAddBtn.Text = "Add Service"
         Me.SAddBtn.UseVisualStyleBackColor = False
@@ -224,43 +264,34 @@ Partial Class ManageServices
         Me.ResetBtn.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.ResetBtn.FlatAppearance.BorderSize = 0
         Me.ResetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ResetBtn.Location = New System.Drawing.Point(154, 155)
+        Me.ResetBtn.Location = New System.Drawing.Point(154, 119)
         Me.ResetBtn.Name = "ResetBtn"
         Me.ResetBtn.Size = New System.Drawing.Size(181, 33)
         Me.ResetBtn.TabIndex = 54
         Me.ResetBtn.Text = "Reset"
         Me.ResetBtn.UseVisualStyleBackColor = False
         '
-        'STimeLbl
-        '
-        Me.STimeLbl.AutoSize = True
-        Me.STimeLbl.Location = New System.Drawing.Point(17, 81)
-        Me.STimeLbl.Name = "STimeLbl"
-        Me.STimeLbl.Size = New System.Drawing.Size(122, 25)
-        Me.STimeLbl.TabIndex = 52
-        Me.STimeLbl.Text = "Service Time:"
-        '
         'SPriceTb
         '
-        Me.SPriceTb.Location = New System.Drawing.Point(154, 117)
+        Me.SPriceTb.Location = New System.Drawing.Point(154, 80)
         Me.SPriceTb.Name = "SPriceTb"
-        Me.SPriceTb.Size = New System.Drawing.Size(181, 33)
+        Me.SPriceTb.Size = New System.Drawing.Size(245, 33)
         Me.SPriceTb.TabIndex = 51
         '
-        'SPrice
+        'SPriceLbl
         '
-        Me.SPrice.AutoSize = True
-        Me.SPrice.Location = New System.Drawing.Point(90, 120)
-        Me.SPrice.Name = "SPrice"
-        Me.SPrice.Size = New System.Drawing.Size(58, 25)
-        Me.SPrice.TabIndex = 46
-        Me.SPrice.Text = "Price:"
+        Me.SPriceLbl.AutoSize = True
+        Me.SPriceLbl.Location = New System.Drawing.Point(90, 83)
+        Me.SPriceLbl.Name = "SPriceLbl"
+        Me.SPriceLbl.Size = New System.Drawing.Size(58, 25)
+        Me.SPriceLbl.TabIndex = 46
+        Me.SPriceLbl.Text = "Price:"
         '
         'SNameTb
         '
         Me.SNameTb.Location = New System.Drawing.Point(154, 39)
         Me.SNameTb.Name = "SNameTb"
-        Me.SNameTb.Size = New System.Drawing.Size(181, 33)
+        Me.SNameTb.Size = New System.Drawing.Size(245, 33)
         Me.SNameTb.TabIndex = 45
         '
         'SNameLbl
@@ -331,6 +362,10 @@ Partial Class ManageServices
         Me.ExitPb.TabIndex = 15
         Me.ExitPb.TabStop = False
         '
+        'Usp_View_ServicesTableAdapter
+        '
+        Me.Usp_View_ServicesTableAdapter.ClearBeforeFill = True
+        '
         'ManageServices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
@@ -354,7 +389,9 @@ Partial Class ManageServices
         Me.Text = "AddUpdate"
         Me.AddUpdatePnl.ResumeLayout(False)
         Me.AddUpdatePnl.PerformLayout()
-        CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeeDGV, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UspViewServicesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpaMgtSysDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -373,14 +410,18 @@ Partial Class ManageServices
     Friend WithEvents ManageEmployeesBtn As Button
     Friend WithEvents ManageServiesLbl As Label
     Friend WithEvents ResetBtn As Button
-    Friend WithEvents STimeLbl As Label
     Friend WithEvents SPriceTb As TextBox
-    Friend WithEvents SPrice As Label
+    Friend WithEvents SPriceLbl As Label
     Friend WithEvents SNameTb As TextBox
     Friend WithEvents SNameLbl As Label
-    Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents SRemoveBtn As Button
     Friend WithEvents SUpdateBtn As Button
     Friend WithEvents SAddBtn As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents SpaMgtSysDataSet2 As SpaMgtSysDataSet2
+    Friend WithEvents EmployeeDGV As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ServiceNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CostDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UspViewServicesBindingSource As BindingSource
+    Friend WithEvents Usp_View_ServicesTableAdapter As SpaMgtSysDataSet2TableAdapters.Usp_View_ServicesTableAdapter
 End Class
