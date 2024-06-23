@@ -1,4 +1,4 @@
-﻿Public Class Update
+﻿Public Class ShiftAppointment
     Sub ExitPb_MouseEnter(sender As Object, e As EventArgs) Handles ExitPb.MouseEnter
         ExitPb.BackColor = Color.Red
     End Sub
@@ -27,6 +27,12 @@
     Private Sub LogoutLbl_Click(sender As Object, e As EventArgs) Handles LogoutLbl.Click
         Dim Login As Login = New Login
         Login.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub CustomersBtn_Click(sender As Object, e As EventArgs) Handles CustomersBtn.Click
+        Dim ManageCus As New UserManageCustomers
+        ManageCus.Show()
         Me.Hide()
     End Sub
 End Class

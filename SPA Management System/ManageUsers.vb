@@ -90,9 +90,9 @@ Public Class ManageUsers
             MsgBox("Missing Information")
         ElseIf GlobalVariables.Key > 0 Then
             Reset()
-            MsgBox("Exception Occured Try Again")
+            MsgBox("Key Exception Occured! Try Again")
         Else
-            Dim Query As String = "Usp_Add_Users"
+            Dim Query As String = "Usp_Add_User"
             Dim Param As New List(Of SqlParameter) From {
                 New SqlParameter("@FName", UFNameTb.Text.ToString()),
                 New SqlParameter("@LName", ULNameTb.Text.ToString()),
@@ -106,11 +106,12 @@ Public Class ManageUsers
             Dim CmdType As CommandType = CommandType.StoredProcedure
             Dim AddEmpResult = GlobalVariables.InsertUpdateDelete(Query, Param, CmdType)
             If AddEmpResult = -1 Then
-                MsgBox("Exception Occured Try Again")
+                MsgBox("DataBase Exception Occured! Try Again")
                 Reset()
             Else
                 Me.Usp_View_UsersTableAdapter.Fill(Me.SpaMgtSysDataSet.Usp_View_Users)
                 MsgBox("User Added Sucessfully")
+                Reset()
             End If
         End If
     End Sub
@@ -136,11 +137,12 @@ Public Class ManageUsers
             Dim CmdType As CommandType = CommandType.StoredProcedure
             Dim AddEmpResult = GlobalVariables.InsertUpdateDelete(Query, Param, CmdType)
             If AddEmpResult = -1 Then
-                MsgBox("Exception Occured Try Again")
+                MsgBox("DataBase Exception Occured! Try Again")
                 Reset()
             Else
                 Me.Usp_View_UsersTableAdapter.Fill(Me.SpaMgtSysDataSet.Usp_View_Users)
                 MsgBox("User Info Updated Sucessfully")
+                Reset()
             End If
         End If
     End Sub
@@ -153,7 +155,8 @@ Public Class ManageUsers
             ULNameTb.Text = row.Cells(2).Value.ToString()
             UAddressTb.Text = row.Cells(3).Value.ToString()
             UContactTb.Text = row.Cells(4).Value.ToString()
-            UType.Checked = Convert.ToBoolean(row.Cells(5).Value)
+            UsrNameTb.Text = row.Cells(5).Value.ToString()
+            UType.Checked = Convert.ToBoolean(row.Cells(6).Value)
             If UFNameTb.Text = "" Then
                 GlobalVariables.Key = 0
             Else
@@ -177,7 +180,7 @@ Public Class ManageUsers
             Dim CmdType As CommandType = CommandType.StoredProcedure
             Dim AddEmpResult = GlobalVariables.InsertUpdateDelete(Query, Param, CmdType)
             If AddEmpResult = -1 Then
-                MsgBox("Exception Occured Try Again")
+                MsgBox("DataBase Exception Occured! Try Again")
                 Reset()
             Else
                 Me.Usp_View_UsersTableAdapter.Fill(Me.SpaMgtSysDataSet.Usp_View_Users)
@@ -185,4 +188,5 @@ Public Class ManageUsers
             End If
         End If
     End Sub
+
 End Class

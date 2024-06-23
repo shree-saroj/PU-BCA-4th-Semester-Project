@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Update
+Partial Class ShiftAppointment
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,16 +22,17 @@ Partial Class Update
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Update))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ShiftAppointment))
         Me.CancelBtn = New System.Windows.Forms.Button()
         Me.BookBtn = New System.Windows.Forms.Button()
         Me.AvailabilityBtn = New System.Windows.Forms.Button()
-        Me.UpdatePnl = New System.Windows.Forms.Panel()
-        Me.UpdateInfoLbl = New System.Windows.Forms.Label()
+        Me.ShiftAppointmentPnl = New System.Windows.Forms.Panel()
+        Me.ShiftAppointmentLbl = New System.Windows.Forms.Label()
         Me.LogoutLbl = New System.Windows.Forms.Label()
+        Me.CustomersBtn = New System.Windows.Forms.Button()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
-        Me.UpdatePnl.SuspendLayout()
+        Me.ShiftAppointmentPnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,7 +43,7 @@ Partial Class Update
         Me.CancelBtn.FlatAppearance.BorderSize = 0
         Me.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CancelBtn.Location = New System.Drawing.Point(12, 255)
+        Me.CancelBtn.Location = New System.Drawing.Point(12, 319)
         Me.CancelBtn.Name = "CancelBtn"
         Me.CancelBtn.Size = New System.Drawing.Size(154, 63)
         Me.CancelBtn.TabIndex = 21
@@ -56,7 +57,7 @@ Partial Class Update
         Me.BookBtn.FlatAppearance.BorderSize = 0
         Me.BookBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BookBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BookBtn.Location = New System.Drawing.Point(12, 177)
+        Me.BookBtn.Location = New System.Drawing.Point(12, 250)
         Me.BookBtn.Name = "BookBtn"
         Me.BookBtn.Size = New System.Drawing.Size(154, 63)
         Me.BookBtn.TabIndex = 20
@@ -70,7 +71,7 @@ Partial Class Update
         Me.AvailabilityBtn.FlatAppearance.BorderSize = 0
         Me.AvailabilityBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AvailabilityBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AvailabilityBtn.Location = New System.Drawing.Point(12, 101)
+        Me.AvailabilityBtn.Location = New System.Drawing.Point(12, 112)
         Me.AvailabilityBtn.Name = "AvailabilityBtn"
         Me.AvailabilityBtn.Size = New System.Drawing.Size(154, 63)
         Me.AvailabilityBtn.TabIndex = 19
@@ -78,25 +79,25 @@ Partial Class Update
         Me.AvailabilityBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.AvailabilityBtn.UseVisualStyleBackColor = False
         '
-        'UpdatePnl
+        'ShiftAppointmentPnl
         '
-        Me.UpdatePnl.BackColor = System.Drawing.Color.White
-        Me.UpdatePnl.Controls.Add(Me.UpdateInfoLbl)
-        Me.UpdatePnl.Location = New System.Drawing.Point(172, 37)
-        Me.UpdatePnl.Name = "UpdatePnl"
-        Me.UpdatePnl.Size = New System.Drawing.Size(840, 527)
-        Me.UpdatePnl.TabIndex = 18
+        Me.ShiftAppointmentPnl.BackColor = System.Drawing.Color.White
+        Me.ShiftAppointmentPnl.Controls.Add(Me.ShiftAppointmentLbl)
+        Me.ShiftAppointmentPnl.Location = New System.Drawing.Point(172, 37)
+        Me.ShiftAppointmentPnl.Name = "ShiftAppointmentPnl"
+        Me.ShiftAppointmentPnl.Size = New System.Drawing.Size(840, 527)
+        Me.ShiftAppointmentPnl.TabIndex = 18
         '
-        'UpdateInfoLbl
+        'ShiftAppointmentLbl
         '
-        Me.UpdateInfoLbl.AutoSize = True
-        Me.UpdateInfoLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UpdateInfoLbl.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.UpdateInfoLbl.Location = New System.Drawing.Point(381, 4)
-        Me.UpdateInfoLbl.Name = "UpdateInfoLbl"
-        Me.UpdateInfoLbl.Size = New System.Drawing.Size(114, 25)
-        Me.UpdateInfoLbl.TabIndex = 27
-        Me.UpdateInfoLbl.Text = "Update Info"
+        Me.ShiftAppointmentLbl.AutoSize = True
+        Me.ShiftAppointmentLbl.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ShiftAppointmentLbl.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ShiftAppointmentLbl.Location = New System.Drawing.Point(330, 1)
+        Me.ShiftAppointmentLbl.Name = "ShiftAppointmentLbl"
+        Me.ShiftAppointmentLbl.Size = New System.Drawing.Size(171, 25)
+        Me.ShiftAppointmentLbl.TabIndex = 27
+        Me.ShiftAppointmentLbl.Text = "Shift Appointment"
         '
         'LogoutLbl
         '
@@ -107,6 +108,20 @@ Partial Class Update
         Me.LogoutLbl.Size = New System.Drawing.Size(71, 25)
         Me.LogoutLbl.TabIndex = 23
         Me.LogoutLbl.Text = "Logout"
+        '
+        'CustomersBtn
+        '
+        Me.CustomersBtn.BackColor = System.Drawing.Color.LightGray
+        Me.CustomersBtn.FlatAppearance.BorderSize = 0
+        Me.CustomersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CustomersBtn.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomersBtn.Location = New System.Drawing.Point(12, 181)
+        Me.CustomersBtn.Name = "CustomersBtn"
+        Me.CustomersBtn.Size = New System.Drawing.Size(154, 63)
+        Me.CustomersBtn.TabIndex = 26
+        Me.CustomersBtn.Text = "Manage Customers"
+        Me.CustomersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.CustomersBtn.UseVisualStyleBackColor = False
         '
         'SmsPb
         '
@@ -128,27 +143,28 @@ Partial Class Update
         Me.ExitPb.TabIndex = 14
         Me.ExitPb.TabStop = False
         '
-        'Update
+        'ShiftAppointment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
         Me.ClientSize = New System.Drawing.Size(1024, 576)
+        Me.Controls.Add(Me.CustomersBtn)
+        Me.Controls.Add(Me.AvailabilityBtn)
         Me.Controls.Add(Me.LogoutLbl)
-        Me.Controls.Add(Me.SmsPb)
         Me.Controls.Add(Me.CancelBtn)
         Me.Controls.Add(Me.BookBtn)
-        Me.Controls.Add(Me.AvailabilityBtn)
-        Me.Controls.Add(Me.UpdatePnl)
+        Me.Controls.Add(Me.SmsPb)
+        Me.Controls.Add(Me.ShiftAppointmentPnl)
         Me.Controls.Add(Me.ExitPb)
         Me.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(6)
-        Me.Name = "Update"
+        Me.Name = "ShiftAppointment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Update"
-        Me.UpdatePnl.ResumeLayout(False)
-        Me.UpdatePnl.PerformLayout()
+        Me.ShiftAppointmentPnl.ResumeLayout(False)
+        Me.ShiftAppointmentPnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -161,7 +177,8 @@ Partial Class Update
     Friend WithEvents CancelBtn As Button
     Friend WithEvents BookBtn As Button
     Friend WithEvents AvailabilityBtn As Button
-    Friend WithEvents UpdatePnl As Panel
+    Friend WithEvents ShiftAppointmentPnl As Panel
     Friend WithEvents LogoutLbl As Label
-    Friend WithEvents UpdateInfoLbl As Label
+    Friend WithEvents ShiftAppointmentLbl As Label
+    Friend WithEvents CustomersBtn As Button
 End Class

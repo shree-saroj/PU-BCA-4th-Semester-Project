@@ -63,7 +63,9 @@
     <Reference Include="RestSharp, Version=111.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>packages\RestSharp.111.2.0\lib\net48\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -183,10 +185,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SpaMgtSysDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SpaMgtSysDataSet1.Designer.vb">
+    <Compile Include="SpaMgtSysDataSet11.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SpaMgtSysDataSet1.xsd</DependentUpon>
+      <DependentUpon>SpaMgtSysDataSet11.xsd</DependentUpon>
     </Compile>
     <Compile Include="SpaMgtSysDataSet2.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -198,10 +200,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SpaMgtSysDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Update.Designer.vb">
-      <DependentUpon>Update.vb</DependentUpon>
+    <Compile Include="SpaMgtSysDataSet3.vb">
+      <DependentUpon>SpaMgtSysDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Update.vb">
+    <Compile Include="SpaMgtSysDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftAppointment.Designer.vb">
+      <DependentUpon>ShiftAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManageCustomers.Designer.vb">
+      <DependentUpon>UserManageCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManageCustomers.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewCustomerInfo.Designer.vb">
@@ -251,8 +267,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update.resx">
-      <DependentUpon>Update.vb</DependentUpon>
+    <EmbeddedResource Include="ShiftAppointment.resx">
+      <DependentUpon>ShiftAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManageCustomers.resx">
+      <DependentUpon>UserManageCustomers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewCustomerInfo.resx">
       <DependentUpon>ViewCustomerInfo.vb</DependentUpon>
@@ -287,16 +306,16 @@
     <None Include="SpaMgtSysDataSet.xss">
       <DependentUpon>SpaMgtSysDataSet.xsd</DependentUpon>
     </None>
-    <None Include="SpaMgtSysDataSet1.xsc">
-      <DependentUpon>SpaMgtSysDataSet1.xsd</DependentUpon>
+    <None Include="SpaMgtSysDataSet11.xsc">
+      <DependentUpon>SpaMgtSysDataSet11.xsd</DependentUpon>
     </None>
-    <None Include="SpaMgtSysDataSet1.xsd">
+    <None Include="SpaMgtSysDataSet11.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SpaMgtSysDataSet1.Designer.vb</LastGenOutput>
+      <LastGenOutput>SpaMgtSysDataSet11.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SpaMgtSysDataSet1.xss">
-      <DependentUpon>SpaMgtSysDataSet1.xsd</DependentUpon>
+    <None Include="SpaMgtSysDataSet11.xss">
+      <DependentUpon>SpaMgtSysDataSet11.xsd</DependentUpon>
     </None>
     <None Include="SpaMgtSysDataSet2.xsc">
       <DependentUpon>SpaMgtSysDataSet2.xsd</DependentUpon>
@@ -319,6 +338,17 @@
     </None>
     <None Include="SpaMgtSysDataSet3.xss">
       <DependentUpon>SpaMgtSysDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet4.xsc">
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpaMgtSysDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpaMgtSysDataSet4.xss">
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

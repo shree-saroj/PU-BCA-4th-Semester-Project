@@ -46,4 +46,10 @@ Public Class ViewTransactions
         Login.Show()
         Me.Hide()
     End Sub
+
+    Private Sub ViewTransactions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpaMgtSysDataSet4.Usp_View_Transactions' table. You can move, or remove it, as needed.
+        Me.Usp_View_TransactionsTableAdapter.Fill(Me.SpaMgtSysDataSet4.Usp_View_Transactions)
+
+    End Sub
 End Class
