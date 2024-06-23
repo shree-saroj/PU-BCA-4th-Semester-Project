@@ -35,7 +35,14 @@ Partial Class ManageEmployees
         Me.ManageServicesBtn = New System.Windows.Forms.Button()
         Me.ManageEmployeesPnl = New System.Windows.Forms.Panel()
         Me.EmployeeDGV = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.EmpIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UspViewEmployeesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SpaMgtSysDataSet1 = New SPA_Management_System.SpaMgtSysDataSet1()
         Me.ResetBtn = New System.Windows.Forms.Button()
         Me.ERemoveBtn = New System.Windows.Forms.Button()
         Me.EUpdateBtn = New System.Windows.Forms.Button()
@@ -54,23 +61,14 @@ Partial Class ManageEmployees
         Me.UspViewEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
-        Me.SpaMgtSysDataSet1 = New SPA_Management_System.SpaMgtSysDataSet1()
-        Me.UspViewEmployeesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Usp_View_EmployeesTableAdapter = New SPA_Management_System.SpaMgtSysDataSet1TableAdapters.Usp_View_EmployeesTableAdapter()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Usp_View_EmployeesTableAdapter1 = New SPA_Management_System.SpaMgtSysDataSet1TableAdapters.Usp_View_EmployeesTableAdapter()
         Me.ManageEmployeesPnl.SuspendLayout()
         CType(Me.EmployeeDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UspViewEmployeesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpaMgtSysDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UspViewEmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpaMgtSysDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UspViewEmployeesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ManageUsersBtn
@@ -195,8 +193,8 @@ Partial Class ManageEmployees
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.EmployeeDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.EmployeeDGV.ColumnHeadersHeight = 30
-        Me.EmployeeDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
-        Me.EmployeeDGV.DataSource = Me.UspViewEmployeesBindingSource2
+        Me.EmployeeDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmpIdDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.ContactDataGridViewTextBoxColumn, Me.PostDataGridViewTextBoxColumn})
+        Me.EmployeeDGV.DataSource = Me.UspViewEmployeesBindingSource1
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -236,6 +234,64 @@ Partial Class ManageEmployees
         Me.EmployeeDGV.ThemeStyle.RowsStyle.Height = 30
         Me.EmployeeDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.EmployeeDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'EmpIdDataGridViewTextBoxColumn
+        '
+        Me.EmpIdDataGridViewTextBoxColumn.DataPropertyName = "Emp Id"
+        Me.EmpIdDataGridViewTextBoxColumn.FillWeight = 60.9137!
+        Me.EmpIdDataGridViewTextBoxColumn.HeaderText = "Emp Id"
+        Me.EmpIdDataGridViewTextBoxColumn.Name = "EmpIdDataGridViewTextBoxColumn"
+        Me.EmpIdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "First Name"
+        Me.FirstNameDataGridViewTextBoxColumn.FillWeight = 80.0!
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "Last Name"
+        Me.LastNameDataGridViewTextBoxColumn.FillWeight = 80.0!
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'AddressDataGridViewTextBoxColumn
+        '
+        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "Address"
+        Me.AddressDataGridViewTextBoxColumn.FillWeight = 107.8173!
+        Me.AddressDataGridViewTextBoxColumn.HeaderText = "Address"
+        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
+        Me.AddressDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ContactDataGridViewTextBoxColumn
+        '
+        Me.ContactDataGridViewTextBoxColumn.DataPropertyName = "Contact"
+        Me.ContactDataGridViewTextBoxColumn.FillWeight = 107.8173!
+        Me.ContactDataGridViewTextBoxColumn.HeaderText = "Contact"
+        Me.ContactDataGridViewTextBoxColumn.Name = "ContactDataGridViewTextBoxColumn"
+        Me.ContactDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PostDataGridViewTextBoxColumn
+        '
+        Me.PostDataGridViewTextBoxColumn.DataPropertyName = "Post"
+        Me.PostDataGridViewTextBoxColumn.FillWeight = 60.0!
+        Me.PostDataGridViewTextBoxColumn.HeaderText = "Post"
+        Me.PostDataGridViewTextBoxColumn.Name = "PostDataGridViewTextBoxColumn"
+        Me.PostDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UspViewEmployeesBindingSource1
+        '
+        Me.UspViewEmployeesBindingSource1.DataMember = "Usp_View_Employees"
+        Me.UspViewEmployeesBindingSource1.DataSource = Me.SpaMgtSysDataSet1
+        '
+        'SpaMgtSysDataSet1
+        '
+        Me.SpaMgtSysDataSet1.DataSetName = "SpaMgtSysDataSet1"
+        Me.SpaMgtSysDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ResetBtn
         '
@@ -381,6 +437,10 @@ Partial Class ManageEmployees
         Me.ManageEmployeesLbl.TabIndex = 27
         Me.ManageEmployeesLbl.Text = "Manage Employees"
         '
+        'UspViewEmployeesBindingSource
+        '
+        Me.UspViewEmployeesBindingSource.DataMember = "Usp_View_Employees"
+        '
         'SmsPb
         '
         Me.SmsPb.Image = CType(resources.GetObject("SmsPb.Image"), System.Drawing.Image)
@@ -401,63 +461,9 @@ Partial Class ManageEmployees
         Me.ExitPb.TabIndex = 19
         Me.ExitPb.TabStop = False
         '
-        'SpaMgtSysDataSet1
+        'Usp_View_EmployeesTableAdapter1
         '
-        Me.SpaMgtSysDataSet1.DataSetName = "SpaMgtSysDataSet1"
-        Me.SpaMgtSysDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UspViewEmployeesBindingSource2
-        '
-        Me.UspViewEmployeesBindingSource2.DataMember = "Usp_View_Employees"
-        Me.UspViewEmployeesBindingSource2.DataSource = Me.SpaMgtSysDataSet1
-        '
-        'Usp_View_EmployeesTableAdapter
-        '
-        Me.Usp_View_EmployeesTableAdapter.ClearBeforeFill = True
-        '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.FillWeight = 75.0!
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "First Name"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "First Name"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Last Name"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Last Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Address"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Address"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Contact"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Contact"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Post"
-        Me.DataGridViewTextBoxColumn5.FillWeight = 75.0!
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Post"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.Usp_View_EmployeesTableAdapter1.ClearBeforeFill = True
         '
         'ManageEmployees
         '
@@ -484,11 +490,10 @@ Partial Class ManageEmployees
         Me.ManageEmployeesPnl.PerformLayout()
         CType(Me.EmployeeDGV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UspViewEmployeesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpaMgtSysDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UspViewEmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpaMgtSysDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UspViewEmployeesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -519,7 +524,9 @@ Partial Class ManageEmployees
     Friend WithEvents ERemoveBtn As Button
     Friend WithEvents UspViewEmployeesBindingSource As BindingSource
     Friend WithEvents ResetBtn As Button
+    Friend WithEvents SpaMgtSysDataSet1 As SpaMgtSysDataSet1
     Friend WithEvents UspViewEmployeesBindingSource1 As BindingSource
+    Friend WithEvents Usp_View_EmployeesTableAdapter1 As SpaMgtSysDataSet1TableAdapters.Usp_View_EmployeesTableAdapter
     Friend WithEvents EmployeeDGV As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents EmpIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -527,13 +534,4 @@ Partial Class ManageEmployees
     Friend WithEvents AddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ContactDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PostDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SpaMgtSysDataSet1 As SpaMgtSysDataSet1
-    Friend WithEvents UspViewEmployeesBindingSource2 As BindingSource
-    Friend WithEvents Usp_View_EmployeesTableAdapter As SpaMgtSysDataSet1TableAdapters.Usp_View_EmployeesTableAdapter
-    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
 End Class

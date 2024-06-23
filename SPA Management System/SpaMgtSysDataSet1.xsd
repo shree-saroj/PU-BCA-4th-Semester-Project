@@ -21,7 +21,7 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Emp Id" DataSetColumn="Emp Id" />
               <Mapping SourceColumn="First Name" DataSetColumn="First Name" />
               <Mapping SourceColumn="Last Name" DataSetColumn="Last Name" />
               <Mapping SourceColumn="Address" DataSetColumn="Address" />
@@ -41,7 +41,7 @@
         <xs:element name="Usp_View_Employees" msprop:Generator_RowEvHandlerName="Usp_View_EmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="Usp_View_EmployeesRowDeleted" msprop:Generator_RowDeletingName="Usp_View_EmployeesRowDeleting" msprop:Generator_RowEvArgName="Usp_View_EmployeesRowChangeEvent" msprop:Generator_TablePropName="Usp_View_Employees" msprop:Generator_RowChangedName="Usp_View_EmployeesRowChanged" msprop:Generator_RowChangingName="Usp_View_EmployeesRowChanging" msprop:Generator_TableClassName="Usp_View_EmployeesDataTable" msprop:Generator_RowClassName="Usp_View_EmployeesRow" msprop:Generator_TableVarName="tableUsp_View_Employees" msprop:Generator_UserTableName="Usp_View_Employees">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Emp_x0020_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="Emp_Id" msprop:Generator_ColumnPropNameInTable="Emp_IdColumn" msprop:Generator_ColumnVarNameInTable="columnEmp_Id" msprop:Generator_UserColumnName="Emp Id" type="xs:int" />
               <xs:element name="First_x0020_Name" msprop:Generator_ColumnPropNameInRow="First_Name" msprop:Generator_ColumnPropNameInTable="First_NameColumn" msprop:Generator_ColumnVarNameInTable="columnFirst_Name" msprop:Generator_UserColumnName="First Name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -84,7 +84,7 @@
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Usp_View_Employees" />
-      <xs:field xpath="mstns:ID" />
+      <xs:field xpath="mstns:Emp_x0020_Id" />
     </xs:unique>
   </xs:element>
 </xs:schema>

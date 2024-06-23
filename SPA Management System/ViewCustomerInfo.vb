@@ -77,7 +77,7 @@ Public Class ViewCustomerInfo
             Dim CmdType As CommandType = CommandType.StoredProcedure
             Dim AddEmpResult = GlobalVariables.InsertUpdateDelete(Query, Param, CmdType)
             If AddEmpResult = -1 Then
-                MsgBox("DataBase Exception Occured! Try Again")
+                MsgBox("Exception Occured Try Again")
                 Reset()
             Else
                 Me.Usp_View_CustomersTableAdapter1.Fill(Me.SpaMgtSysDataSet3.Usp_View_Customers)
@@ -109,13 +109,13 @@ Public Class ViewCustomerInfo
         Else
             Dim Query As String = "Usp_Remove_Customer"
             Dim Param As New List(Of SqlParameter) From {
-                New SqlParameter("@CId", GlobalVariables.Key),
-                New SqlParameter("@AdId", GlobalVariables.UserId)
+                New SqlParameter("@UId", GlobalVariables.Key),
+                New SqlParameter("@UAdId", GlobalVariables.UserId)
             }
             Dim CmdType As CommandType = CommandType.StoredProcedure
             Dim AddEmpResult = GlobalVariables.InsertUpdateDelete(Query, Param, CmdType)
             If AddEmpResult = -1 Then
-                MsgBox("DataBase Exception Occured! Try Again")
+                MsgBox("Exception Occured Try Again")
                 Reset()
             Else
                 Me.Usp_View_CustomersTableAdapter1.Fill(Me.SpaMgtSysDataSet3.Usp_View_Customers)

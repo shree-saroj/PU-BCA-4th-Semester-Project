@@ -22,11 +22,7 @@ Partial Class ViewTransactions
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewTransactions))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ManageEmployeesBtn = New System.Windows.Forms.Button()
         Me.ViewStatisticsBtn = New System.Windows.Forms.Button()
         Me.LogoutLbl = New System.Windows.Forms.Label()
@@ -37,21 +33,9 @@ Partial Class ViewTransactions
         Me.ViewTransactionsLbl = New System.Windows.Forms.Label()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
-        Me.EmployeeDGV = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.SpaMgtSysDataSet4 = New SPA_Management_System.SpaMgtSysDataSet4()
-        Me.UspViewTransactionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Usp_View_TransactionsTableAdapter = New SPA_Management_System.SpaMgtSysDataSet4TableAdapters.Usp_View_TransactionsTableAdapter()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BookIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BookingByDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AmountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ViewTransactionsPnl.SuspendLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmployeeDGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpaMgtSysDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UspViewTransactionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ManageEmployeesBtn
@@ -137,7 +121,6 @@ Partial Class ViewTransactions
         'ViewTransactionsPnl
         '
         Me.ViewTransactionsPnl.BackColor = System.Drawing.Color.White
-        Me.ViewTransactionsPnl.Controls.Add(Me.EmployeeDGV)
         Me.ViewTransactionsPnl.Controls.Add(Me.ViewTransactionsLbl)
         Me.ViewTransactionsPnl.Location = New System.Drawing.Point(172, 37)
         Me.ViewTransactionsPnl.Name = "ViewTransactionsPnl"
@@ -175,118 +158,6 @@ Partial Class ViewTransactions
         Me.ExitPb.TabIndex = 16
         Me.ExitPb.TabStop = False
         '
-        'EmployeeDGV
-        '
-        Me.EmployeeDGV.AllowUserToAddRows = False
-        Me.EmployeeDGV.AllowUserToDeleteRows = False
-        Me.EmployeeDGV.AllowUserToResizeColumns = False
-        Me.EmployeeDGV.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.EmployeeDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.EmployeeDGV.AutoGenerateColumns = False
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EmployeeDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.EmployeeDGV.ColumnHeadersHeight = 30
-        Me.EmployeeDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.BookIDDataGridViewTextBoxColumn, Me.BookingByDataGridViewTextBoxColumn, Me.CustomerNameDataGridViewTextBoxColumn, Me.AmountDataGridViewTextBoxColumn})
-        Me.EmployeeDGV.DataSource = Me.UspViewTransactionsBindingSource
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.EmployeeDGV.DefaultCellStyle = DataGridViewCellStyle3
-        Me.EmployeeDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EmployeeDGV.Location = New System.Drawing.Point(23, 32)
-        Me.EmployeeDGV.Name = "EmployeeDGV"
-        Me.EmployeeDGV.ReadOnly = True
-        Me.EmployeeDGV.RowHeadersVisible = False
-        Me.EmployeeDGV.RowTemplate.Height = 30
-        Me.EmployeeDGV.RowTemplate.ReadOnly = True
-        Me.EmployeeDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.EmployeeDGV.Size = New System.Drawing.Size(795, 483)
-        Me.EmployeeDGV.TabIndex = 59
-        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.EmployeeDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.EmployeeDGV.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.EmployeeDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EmployeeDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EmployeeDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.EmployeeDGV.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmployeeDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.EmployeeDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.EmployeeDGV.ThemeStyle.HeaderStyle.Height = 30
-        Me.EmployeeDGV.ThemeStyle.ReadOnly = True
-        Me.EmployeeDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.EmployeeDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.EmployeeDGV.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmployeeDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.EmployeeDGV.ThemeStyle.RowsStyle.Height = 30
-        Me.EmployeeDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EmployeeDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'SpaMgtSysDataSet4
-        '
-        Me.SpaMgtSysDataSet4.DataSetName = "SpaMgtSysDataSet4"
-        Me.SpaMgtSysDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UspViewTransactionsBindingSource
-        '
-        Me.UspViewTransactionsBindingSource.DataMember = "Usp_View_Transactions"
-        Me.UspViewTransactionsBindingSource.DataSource = Me.SpaMgtSysDataSet4
-        '
-        'Usp_View_TransactionsTableAdapter
-        '
-        Me.Usp_View_TransactionsTableAdapter.ClearBeforeFill = True
-        '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.FillWeight = 25.0!
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BookIDDataGridViewTextBoxColumn
-        '
-        Me.BookIDDataGridViewTextBoxColumn.DataPropertyName = "Book ID"
-        Me.BookIDDataGridViewTextBoxColumn.FillWeight = 50.0!
-        Me.BookIDDataGridViewTextBoxColumn.HeaderText = "Book ID"
-        Me.BookIDDataGridViewTextBoxColumn.Name = "BookIDDataGridViewTextBoxColumn"
-        Me.BookIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BookingByDataGridViewTextBoxColumn
-        '
-        Me.BookingByDataGridViewTextBoxColumn.DataPropertyName = "Booking By"
-        Me.BookingByDataGridViewTextBoxColumn.HeaderText = "Booking By"
-        Me.BookingByDataGridViewTextBoxColumn.Name = "BookingByDataGridViewTextBoxColumn"
-        Me.BookingByDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CustomerNameDataGridViewTextBoxColumn
-        '
-        Me.CustomerNameDataGridViewTextBoxColumn.DataPropertyName = "Customer Name"
-        Me.CustomerNameDataGridViewTextBoxColumn.HeaderText = "Customer Name"
-        Me.CustomerNameDataGridViewTextBoxColumn.Name = "CustomerNameDataGridViewTextBoxColumn"
-        Me.CustomerNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'AmountDataGridViewTextBoxColumn
-        '
-        Me.AmountDataGridViewTextBoxColumn.DataPropertyName = "Amount"
-        Me.AmountDataGridViewTextBoxColumn.FillWeight = 75.0!
-        Me.AmountDataGridViewTextBoxColumn.HeaderText = "Amount"
-        Me.AmountDataGridViewTextBoxColumn.Name = "AmountDataGridViewTextBoxColumn"
-        Me.AmountDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'ViewTransactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
@@ -312,9 +183,6 @@ Partial Class ViewTransactions
         Me.ViewTransactionsPnl.PerformLayout()
         CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmployeeDGV, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpaMgtSysDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UspViewTransactionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -330,13 +198,4 @@ Partial Class ViewTransactions
     Friend WithEvents ManageServicesBtn As Button
     Friend WithEvents ViewTransactionsPnl As Panel
     Friend WithEvents ViewTransactionsLbl As Label
-    Friend WithEvents EmployeeDGV As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents SpaMgtSysDataSet4 As SpaMgtSysDataSet4
-    Friend WithEvents UspViewTransactionsBindingSource As BindingSource
-    Friend WithEvents Usp_View_TransactionsTableAdapter As SpaMgtSysDataSet4TableAdapters.Usp_View_TransactionsTableAdapter
-    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents BookIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents BookingByDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustomerNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AmountDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
