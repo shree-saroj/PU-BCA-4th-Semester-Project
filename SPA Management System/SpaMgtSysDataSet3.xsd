@@ -38,11 +38,11 @@
   <xs:element name="SpaMgtSysDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SpaMgtSysDataSet3" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SpaMgtSysDataSet3">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Usp_View_Customers" msprop:Generator_RowEvHandlerName="Usp_View_CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="Usp_View_CustomersRowDeleted" msprop:Generator_RowDeletingName="Usp_View_CustomersRowDeleting" msprop:Generator_RowEvArgName="Usp_View_CustomersRowChangeEvent" msprop:Generator_TablePropName="Usp_View_Customers" msprop:Generator_RowChangedName="Usp_View_CustomersRowChanged" msprop:Generator_UserTableName="Usp_View_Customers" msprop:Generator_RowChangingName="Usp_View_CustomersRowChanging" msprop:Generator_RowClassName="Usp_View_CustomersRow" msprop:Generator_TableClassName="Usp_View_CustomersDataTable" msprop:Generator_TableVarName="tableUsp_View_Customers">
+        <xs:element name="Usp_View_Customers" msprop:Generator_RowEvHandlerName="Usp_View_CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="Usp_View_CustomersRowDeleted" msprop:Generator_RowDeletingName="Usp_View_CustomersRowDeleting" msprop:Generator_RowEvArgName="Usp_View_CustomersRowChangeEvent" msprop:Generator_TablePropName="Usp_View_Customers" msprop:Generator_RowChangedName="Usp_View_CustomersRowChanged" msprop:Generator_RowChangingName="Usp_View_CustomersRowChanging" msprop:Generator_TableClassName="Usp_View_CustomersDataTable" msprop:Generator_RowClassName="Usp_View_CustomersRow" msprop:Generator_TableVarName="tableUsp_View_Customers" msprop:Generator_UserTableName="Usp_View_Customers">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
-              <xs:element name="First_x0020_Name" msprop:Generator_UserColumnName="First Name" msprop:Generator_ColumnPropNameInTable="First_NameColumn" msprop:Generator_ColumnPropNameInRow="First_Name" msprop:Generator_ColumnVarNameInTable="columnFirst_Name">
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="First_x0020_Name" msprop:Generator_ColumnPropNameInRow="First_Name" msprop:Generator_ColumnPropNameInTable="First_NameColumn" msprop:Generator_ColumnVarNameInTable="columnFirst_Name" msprop:Generator_UserColumnName="First Name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -56,7 +56,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Address" msprop:Generator_UserColumnName="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnVarNameInTable="columnAddress">
+              <xs:element name="Address" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_UserColumnName="Address">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />

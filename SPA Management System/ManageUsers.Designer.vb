@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ManageUsers
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ManageUsers
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManageUsers))
@@ -34,6 +34,15 @@ Partial Class ManageUsers
         Me.ViewTransactionsBtn = New System.Windows.Forms.Button()
         Me.ManageServicesBtn = New System.Windows.Forms.Button()
         Me.ManageUsersPnl = New System.Windows.Forms.Panel()
+        Me.UsrNameTb = New System.Windows.Forms.TextBox()
+        Me.UsrNameLbl = New System.Windows.Forms.Label()
+        Me.UsersDGV = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.UserIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AdminDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.UspViewUsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SpaMgtSysDataSet = New SPA_Management_System.SpaMgtSysDataSet()
         Me.ResetBtn = New System.Windows.Forms.Button()
@@ -49,16 +58,8 @@ Partial Class ManageUsers
         Me.ULNameTb = New System.Windows.Forms.TextBox()
         Me.ELNameLbl = New System.Windows.Forms.Label()
         Me.UAddressTb = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.UType = New System.Windows.Forms.CheckBox()
-        Me.UsrNameTb = New System.Windows.Forms.TextBox()
-        Me.UsrNameLbl = New System.Windows.Forms.Label()
-        Me.UConfirmPasswdLbl = New System.Windows.Forms.Label()
-        Me.UConPasswdChkB = New System.Windows.Forms.CheckBox()
-        Me.UPasswdLbl = New System.Windows.Forms.Label()
-        Me.UPasswdChkB = New System.Windows.Forms.CheckBox()
-        Me.UPasswdTb = New System.Windows.Forms.TextBox()
-        Me.UConfirmPasswdTb = New System.Windows.Forms.TextBox()
+        Me.UContactTb = New System.Windows.Forms.TextBox()
+        Me.EContactLbl = New System.Windows.Forms.Label()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -182,6 +183,129 @@ Partial Class ManageUsers
         Me.ManageUsersPnl.Name = "ManageUsersPnl"
         Me.ManageUsersPnl.Size = New System.Drawing.Size(840, 527)
         Me.ManageUsersPnl.TabIndex = 48
+        '
+        'UsrNameTb
+        '
+        Me.UsrNameTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UsrNameTb.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsrNameTb.Location = New System.Drawing.Point(110, 108)
+        Me.UsrNameTb.Name = "UsrNameTb"
+        Me.UsrNameTb.Size = New System.Drawing.Size(169, 29)
+        Me.UsrNameTb.TabIndex = 80
+        '
+        'UsrNameLbl
+        '
+        Me.UsrNameLbl.AutoSize = True
+        Me.UsrNameLbl.Location = New System.Drawing.Point(5, 111)
+        Me.UsrNameLbl.Name = "UsrNameLbl"
+        Me.UsrNameLbl.Size = New System.Drawing.Size(109, 25)
+        Me.UsrNameLbl.TabIndex = 79
+        Me.UsrNameLbl.Text = "User Name:"
+        '
+        'UsersDGV
+        '
+        Me.UsersDGV.AllowUserToAddRows = False
+        Me.UsersDGV.AllowUserToDeleteRows = False
+        Me.UsersDGV.AllowUserToResizeColumns = False
+        Me.UsersDGV.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.UsersDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.UsersDGV.AutoGenerateColumns = False
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.UsersDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.UsersDGV.ColumnHeadersHeight = 52
+        Me.UsersDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UserIdDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.ContactDataGridViewTextBoxColumn, Me.AdminDataGridViewCheckBoxColumn})
+        Me.UsersDGV.DataSource = Me.UspViewUsersBindingSource
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.UsersDGV.DefaultCellStyle = DataGridViewCellStyle3
+        Me.UsersDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UsersDGV.Location = New System.Drawing.Point(285, 33)
+        Me.UsersDGV.Name = "UsersDGV"
+        Me.UsersDGV.ReadOnly = True
+        Me.UsersDGV.RowHeadersVisible = False
+        Me.UsersDGV.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.UsersDGV.RowTemplate.Height = 30
+        Me.UsersDGV.RowTemplate.ReadOnly = True
+        Me.UsersDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.UsersDGV.Size = New System.Drawing.Size(552, 491)
+        Me.UsersDGV.TabIndex = 78
+        Me.UsersDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.UsersDGV.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.UsersDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.UsersDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.UsersDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.UsersDGV.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.UsersDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UsersDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UsersDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.UsersDGV.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsersDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.UsersDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.UsersDGV.ThemeStyle.HeaderStyle.Height = 52
+        Me.UsersDGV.ThemeStyle.ReadOnly = True
+        Me.UsersDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.UsersDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.UsersDGV.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsersDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.UsersDGV.ThemeStyle.RowsStyle.Height = 30
+        Me.UsersDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UsersDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'UserIdDataGridViewTextBoxColumn
+        '
+        Me.UserIdDataGridViewTextBoxColumn.DataPropertyName = "User Id"
+        Me.UserIdDataGridViewTextBoxColumn.FillWeight = 60.0!
+        Me.UserIdDataGridViewTextBoxColumn.HeaderText = "User Id"
+        Me.UserIdDataGridViewTextBoxColumn.Name = "UserIdDataGridViewTextBoxColumn"
+        Me.UserIdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "First Name"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "Last Name"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'AddressDataGridViewTextBoxColumn
+        '
+        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "Address"
+        Me.AddressDataGridViewTextBoxColumn.HeaderText = "Address"
+        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
+        Me.AddressDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ContactDataGridViewTextBoxColumn
+        '
+        Me.ContactDataGridViewTextBoxColumn.DataPropertyName = "Contact"
+        Me.ContactDataGridViewTextBoxColumn.HeaderText = "Contact"
+        Me.ContactDataGridViewTextBoxColumn.Name = "ContactDataGridViewTextBoxColumn"
+        Me.ContactDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'AdminDataGridViewCheckBoxColumn
+        '
+        Me.AdminDataGridViewCheckBoxColumn.DataPropertyName = "Admin"
+        Me.AdminDataGridViewCheckBoxColumn.FillWeight = 65.0!
+        Me.AdminDataGridViewCheckBoxColumn.HeaderText = "Admin"
+        Me.AdminDataGridViewCheckBoxColumn.Name = "AdminDataGridViewCheckBoxColumn"
+        Me.AdminDataGridViewCheckBoxColumn.ReadOnly = True
         '
         'UspViewUsersBindingSource
         '
@@ -323,6 +447,24 @@ Partial Class ManageUsers
         Me.UAddressTb.Name = "UAddressTb"
         Me.UAddressTb.Size = New System.Drawing.Size(169, 29)
         Me.UAddressTb.TabIndex = 63
+        '
+        'Panel1
+        '
+        Me.UContactTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UContactTb.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UContactTb.Location = New System.Drawing.Point(110, 186)
+        Me.UContactTb.Name = "UContactTb"
+        Me.UContactTb.Size = New System.Drawing.Size(169, 29)
+        Me.UContactTb.TabIndex = 61
+        '
+        'UType
+        '
+        Me.EContactLbl.AutoSize = True
+        Me.EContactLbl.Location = New System.Drawing.Point(28, 189)
+        Me.EContactLbl.Name = "EContactLbl"
+        Me.EContactLbl.Size = New System.Drawing.Size(81, 25)
+        Me.EContactLbl.TabIndex = 62
+        Me.EContactLbl.Text = "Contact:"
         '
         'Panel1
         '
@@ -643,14 +785,11 @@ Partial Class ManageUsers
     Friend WithEvents UsrNameTb As TextBox
     Friend WithEvents UsrNameLbl As Label
     Friend WithEvents UserIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents UsersDGV As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ContactDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UserNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AdminDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents Panel1 As Panel
 End Class
