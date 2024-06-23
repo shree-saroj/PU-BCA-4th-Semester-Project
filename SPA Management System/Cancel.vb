@@ -19,20 +19,14 @@
         BookAppointment.Show()
         Me.Hide()
     End Sub
-    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles ShifitAppointmentBtn.Click
-        Dim UpdateInfo As ShiftAppointment = New ShiftAppointment
+    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
+        Dim UpdateInfo As Update = New Update
         UpdateInfo.Show()
         Me.Hide()
     End Sub
     Private Sub LogoutLbl_Click(sender As Object, e As EventArgs) Handles LogoutLbl.Click
         Dim Login As Login = New Login
         Login.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub CustomersBtn_Click(sender As Object, e As EventArgs) Handles CustomersBtn.Click
-        Dim ManageCus As New UserManageCustomers
-        ManageCus.Show()
         Me.Hide()
     End Sub
 End Class

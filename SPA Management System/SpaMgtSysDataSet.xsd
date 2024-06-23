@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Usp_View_UsersTableAdapter" GeneratorDataComponentClassName="Usp_View_UsersTableAdapter" Name="Usp_View_Users" UserDataComponentName="Usp_View_UsersTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SpaMgtSysConnectionString (MySettings)" DbObjectName="SpaMgtSys.dbo.Usp_View_Users" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SpaMgtSysConnectionString (MySettings)" DbObjectName="SpaMgtSys.dbo.Usp_View_Users" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.Usp_View_Users</CommandText>
@@ -21,12 +21,11 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="User Id" DataSetColumn="User Id" />
               <Mapping SourceColumn="First Name" DataSetColumn="First Name" />
               <Mapping SourceColumn="Last Name" DataSetColumn="Last Name" />
               <Mapping SourceColumn="Address" DataSetColumn="Address" />
               <Mapping SourceColumn="Contact" DataSetColumn="Contact" />
-              <Mapping SourceColumn="User Name" DataSetColumn="User Name" />
               <Mapping SourceColumn="Admin" DataSetColumn="Admin" />
             </Mappings>
             <Sources />
@@ -36,13 +35,13 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="SpaMgtSysDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SpaMgtSysDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SpaMgtSysDataSet">
+  <xs:element name="SpaMgtSysDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SpaMgtSysDataSet" msprop:Generator_DataSetName="SpaMgtSysDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Usp_View_Users" msprop:Generator_RowEvHandlerName="Usp_View_UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="Usp_View_UsersRowDeleted" msprop:Generator_RowDeletingName="Usp_View_UsersRowDeleting" msprop:Generator_RowEvArgName="Usp_View_UsersRowChangeEvent" msprop:Generator_TablePropName="Usp_View_Users" msprop:Generator_RowChangedName="Usp_View_UsersRowChanged" msprop:Generator_UserTableName="Usp_View_Users" msprop:Generator_RowChangingName="Usp_View_UsersRowChanging" msprop:Generator_RowClassName="Usp_View_UsersRow" msprop:Generator_TableClassName="Usp_View_UsersDataTable" msprop:Generator_TableVarName="tableUsp_View_Users">
+        <xs:element name="Usp_View_Users" msprop:Generator_RowEvHandlerName="Usp_View_UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="Usp_View_UsersRowDeleted" msprop:Generator_RowDeletingName="Usp_View_UsersRowDeleting" msprop:Generator_RowEvArgName="Usp_View_UsersRowChangeEvent" msprop:Generator_TablePropName="Usp_View_Users" msprop:Generator_RowChangedName="Usp_View_UsersRowChanged" msprop:Generator_RowChangingName="Usp_View_UsersRowChanging" msprop:Generator_TableClassName="Usp_View_UsersDataTable" msprop:Generator_RowClassName="Usp_View_UsersRow" msprop:Generator_TableVarName="tableUsp_View_Users" msprop:Generator_UserTableName="Usp_View_Users">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="User_x0020_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="User_Id" msprop:Generator_ColumnPropNameInTable="User_IdColumn" msprop:Generator_ColumnVarNameInTable="columnUser_Id" msprop:Generator_UserColumnName="User Id" type="xs:int" />
               <xs:element name="First_x0020_Name" msprop:Generator_ColumnPropNameInRow="First_Name" msprop:Generator_ColumnPropNameInTable="First_NameColumn" msprop:Generator_ColumnVarNameInTable="columnFirst_Name" msprop:Generator_UserColumnName="First Name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -71,13 +70,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="User_x0020_Name" msprop:Generator_ColumnPropNameInRow="User_Name" msprop:Generator_ColumnPropNameInTable="User_NameColumn" msprop:Generator_ColumnVarNameInTable="columnUser_Name" msprop:Generator_UserColumnName="User Name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="Admin" msprop:Generator_ColumnPropNameInRow="Admin" msprop:Generator_ColumnPropNameInTable="AdminColumn" msprop:Generator_ColumnVarNameInTable="columnAdmin" msprop:Generator_UserColumnName="Admin" type="xs:boolean" />
             </xs:sequence>
           </xs:complexType>
@@ -86,7 +78,7 @@
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Usp_View_Users" />
-      <xs:field xpath="mstns:ID" />
+      <xs:field xpath="mstns:User_x0020_Id" />
     </xs:unique>
   </xs:element>
 </xs:schema>

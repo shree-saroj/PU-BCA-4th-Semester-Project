@@ -23,10 +23,10 @@ Partial Class ViewCustomerInfo
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewCustomerInfo))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewCustomerInfo))
         Me.ManageEmployeesBtn = New System.Windows.Forms.Button()
         Me.ViewStatisticsBtn = New System.Windows.Forms.Button()
         Me.LogoutLbl = New System.Windows.Forms.Label()
@@ -35,43 +35,8 @@ Partial Class ViewCustomerInfo
         Me.ManageServicesBtn = New System.Windows.Forms.Button()
         Me.ViewCustomerInfoPnl = New System.Windows.Forms.Panel()
         Me.CustomersDGV = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.UspViewCustomersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpaMgtSysDataSet3 = New SPA_Management_System.SpaMgtSysDataSet3()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UspViewCustomersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpaMgtSysDataSet3 = New SPA_Management_System.SpaMgtSysDataSet3()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UspViewCustomersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpaMgtSysDataSet3 = New SPA_Management_System.SpaMgtSysDataSet3()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UspViewCustomersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpaMgtSysDataSet3 = New SPA_Management_System.SpaMgtSysDataSet3()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UspViewCustomersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpaMgtSysDataSet3 = New SPA_Management_System.SpaMgtSysDataSet3()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UspViewCustomersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpaMgtSysDataSet3 = New SPA_Management_System.SpaMgtSysDataSet3()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UspViewCustomersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpaMgtSysDataSet3 = New SPA_Management_System.SpaMgtSysDataSet3()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UspViewCustomersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpaMgtSysDataSet3 = New SPA_Management_System.SpaMgtSysDataSet3()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -90,23 +55,21 @@ Partial Class ViewCustomerInfo
         Me.CContactTb = New System.Windows.Forms.TextBox()
         Me.CContactLbl = New System.Windows.Forms.Label()
         Me.UspViewCustomersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SpaMgtSysDataSet2 = New SPA_Management_System.SpaMgtSysDataSet2()
         Me.SmsPb = New System.Windows.Forms.PictureBox()
         Me.ExitPb = New System.Windows.Forms.PictureBox()
+        Me.Usp_View_CustomersTableAdapter = New SPA_Management_System.SpaMgtSysDataSet2TableAdapters.Usp_View_CustomersTableAdapter()
         Me.SpaMgtSysDataSet2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Usp_View_CustomersTableAdapter1 = New SPA_Management_System.SpaMgtSysDataSet3TableAdapters.Usp_View_CustomersTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Address = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ViewCustomerInfoPnl.SuspendLayout()
-        CType(Me.UspViewCustomersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpaMgtSysDataSet2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustomersDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UspViewCustomersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpaMgtSysDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UspViewCustomersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpaMgtSysDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpaMgtSysDataSet2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ManageEmployeesBtn
@@ -377,10 +340,9 @@ Partial Class ViewCustomerInfo
         'CFNameTb
         '
         Me.CFNameTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CFNameTb.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CFNameTb.Location = New System.Drawing.Point(134, 44)
         Me.CFNameTb.Name = "CFNameTb"
-        Me.CFNameTb.Size = New System.Drawing.Size(181, 29)
+        Me.CFNameTb.Size = New System.Drawing.Size(181, 33)
         Me.CFNameTb.TabIndex = 49
         '
         'CAddressLbl
@@ -395,10 +357,9 @@ Partial Class ViewCustomerInfo
         'CLNameTb
         '
         Me.CLNameTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CLNameTb.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CLNameTb.Location = New System.Drawing.Point(134, 83)
         Me.CLNameTb.Name = "CLNameTb"
-        Me.CLNameTb.Size = New System.Drawing.Size(181, 29)
+        Me.CLNameTb.Size = New System.Drawing.Size(181, 33)
         Me.CLNameTb.TabIndex = 57
         '
         'CLNameLbl
@@ -413,25 +374,23 @@ Partial Class ViewCustomerInfo
         'CAddressTb
         '
         Me.CAddressTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CAddressTb.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CAddressTb.Location = New System.Drawing.Point(431, 45)
         Me.CAddressTb.Name = "CAddressTb"
-        Me.CAddressTb.Size = New System.Drawing.Size(181, 29)
+        Me.CAddressTb.Size = New System.Drawing.Size(181, 33)
         Me.CAddressTb.TabIndex = 55
         '
         'CContactTb
         '
         Me.CContactTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CContactTb.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CContactTb.Location = New System.Drawing.Point(431, 83)
+        Me.CContactTb.Location = New System.Drawing.Point(431, 87)
         Me.CContactTb.Name = "CContactTb"
-        Me.CContactTb.Size = New System.Drawing.Size(181, 29)
+        Me.CContactTb.Size = New System.Drawing.Size(181, 33)
         Me.CContactTb.TabIndex = 53
         '
         'CContactLbl
         '
         Me.CContactLbl.AutoSize = True
-        Me.CContactLbl.Location = New System.Drawing.Point(344, 85)
+        Me.CContactLbl.Location = New System.Drawing.Point(344, 89)
         Me.CContactLbl.Name = "CContactLbl"
         Me.CContactLbl.Size = New System.Drawing.Size(81, 25)
         Me.CContactLbl.TabIndex = 54
@@ -440,6 +399,12 @@ Partial Class ViewCustomerInfo
         'UspViewCustomersBindingSource
         '
         Me.UspViewCustomersBindingSource.DataMember = "Usp_View_Customers"
+        Me.UspViewCustomersBindingSource.DataSource = Me.SpaMgtSysDataSet2
+        '
+        'SpaMgtSysDataSet2
+        '
+        Me.SpaMgtSysDataSet2.DataSetName = "SpaMgtSysDataSet2"
+        Me.SpaMgtSysDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'SmsPb
         '
@@ -470,12 +435,9 @@ Partial Class ViewCustomerInfo
         Me.SpaMgtSysDataSet2BindingSource.DataSource = Me.SpaMgtSysDataSet2
         Me.SpaMgtSysDataSet2BindingSource.Position = 0
         '
-        'ContactDataGridViewTextBoxColumn
+        'Usp_View_CustomersTableAdapter1
         '
-        Me.ContactDataGridViewTextBoxColumn.DataPropertyName = "Contact"
-        Me.ContactDataGridViewTextBoxColumn.HeaderText = "Contact"
-        Me.ContactDataGridViewTextBoxColumn.Name = "ContactDataGridViewTextBoxColumn"
-        Me.ContactDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Usp_View_CustomersTableAdapter1.ClearBeforeFill = True
         '
         'ViewCustomerInfo
         '
@@ -500,13 +462,14 @@ Partial Class ViewCustomerInfo
         Me.Text = "ViewCustomerInfo"
         Me.ViewCustomerInfoPnl.ResumeLayout(False)
         Me.ViewCustomerInfoPnl.PerformLayout()
-        CType(Me.UspViewCustomersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpaMgtSysDataSet2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CustomersDGV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UspViewCustomersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpaMgtSysDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UspViewCustomersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpaMgtSysDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SmsPb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ExitPb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpaMgtSysDataSet2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -522,6 +485,7 @@ Partial Class ViewCustomerInfo
     Friend WithEvents ManageServicesBtn As Button
     Friend WithEvents ViewCustomerInfoPnl As Panel
     Friend WithEvents ViewCustomerInfoLbl As Label
+    Friend WithEvents SpaMgtSysDataSet2 As SpaMgtSysDataSet2
     Friend WithEvents UspViewCustomersBindingSource As BindingSource
     Friend WithEvents ResetBtn As Button
     Friend WithEvents CRemoveBtn As Button
@@ -534,7 +498,9 @@ Partial Class ViewCustomerInfo
     Friend WithEvents CAddressTb As TextBox
     Friend WithEvents CContactTb As TextBox
     Friend WithEvents CContactLbl As Label
+    Friend WithEvents Usp_View_CustomersTableAdapter As SpaMgtSysDataSet2TableAdapters.Usp_View_CustomersTableAdapter
     Friend WithEvents SpaMgtSysDataSet2BindingSource As BindingSource
+    Friend WithEvents CustomersDGV As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents SpaMgtSysDataSet3 As SpaMgtSysDataSet3
     Friend WithEvents UspViewCustomersBindingSource1 As BindingSource
     Friend WithEvents Usp_View_CustomersTableAdapter1 As SpaMgtSysDataSet3TableAdapters.Usp_View_CustomersTableAdapter
@@ -543,5 +509,4 @@ Partial Class ViewCustomerInfo
     Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ContactDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ID As DataGridViewTextBoxColumn
 End Class

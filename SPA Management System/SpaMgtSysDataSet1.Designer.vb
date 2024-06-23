@@ -283,7 +283,7 @@ Partial Public Class SpaMgtSysDataSet1
     Partial Public Class Usp_View_EmployeesDataTable
         Inherits Global.System.Data.TypedTableBase(Of Usp_View_EmployeesRow)
         
-        Private columnID As Global.System.Data.DataColumn
+        Private columnEmp_Id As Global.System.Data.DataColumn
         
         Private columnFirst_Name As Global.System.Data.DataColumn
         
@@ -332,9 +332,9 @@ Partial Public Class SpaMgtSysDataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property IDColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Emp_IdColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnID
+                Return Me.columnEmp_Id
             End Get
         End Property
         
@@ -425,8 +425,8 @@ Partial Public Class SpaMgtSysDataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function FindByID(ByVal ID As Integer) As Usp_View_EmployeesRow
-            Return CType(Me.Rows.Find(New Object() {ID}),Usp_View_EmployeesRow)
+        Public Function FindByEmp_Id(ByVal Emp_Id As Integer) As Usp_View_EmployeesRow
+            Return CType(Me.Rows.Find(New Object() {Emp_Id}),Usp_View_EmployeesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -446,7 +446,7 @@ Partial Public Class SpaMgtSysDataSet1
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnID = MyBase.Columns("ID")
+            Me.columnEmp_Id = MyBase.Columns("Emp Id")
             Me.columnFirst_Name = MyBase.Columns("First Name")
             Me.columnLast_Name = MyBase.Columns("Last Name")
             Me.columnAddress = MyBase.Columns("Address")
@@ -457,8 +457,8 @@ Partial Public Class SpaMgtSysDataSet1
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnID)
+            Me.columnEmp_Id = New Global.System.Data.DataColumn("Emp Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEmp_Id)
             Me.columnFirst_Name = New Global.System.Data.DataColumn("First Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFirst_Name)
             Me.columnLast_Name = New Global.System.Data.DataColumn("Last Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -469,11 +469,11 @@ Partial Public Class SpaMgtSysDataSet1
             MyBase.Columns.Add(Me.columnContact)
             Me.columnPost = New Global.System.Data.DataColumn("Post", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPost)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
-            Me.columnID.AutoIncrement = true
-            Me.columnID.AllowDBNull = false
-            Me.columnID.ReadOnly = true
-            Me.columnID.Unique = true
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnEmp_Id}, true))
+            Me.columnEmp_Id.AutoIncrement = true
+            Me.columnEmp_Id.AllowDBNull = false
+            Me.columnEmp_Id.ReadOnly = true
+            Me.columnEmp_Id.Unique = true
             Me.columnFirst_Name.AllowDBNull = false
             Me.columnFirst_Name.MaxLength = 50
             Me.columnLast_Name.AllowDBNull = false
@@ -629,12 +629,12 @@ Partial Public Class SpaMgtSysDataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property ID() As Integer
+        Public Property Emp_Id() As Integer
             Get
-                Return CType(Me(Me.tableUsp_View_Employees.IDColumn),Integer)
+                Return CType(Me(Me.tableUsp_View_Employees.Emp_IdColumn),Integer)
             End Get
             Set
-                Me(Me.tableUsp_View_Employees.IDColumn) = value
+                Me(Me.tableUsp_View_Employees.Emp_IdColumn) = value
             End Set
         End Property
         
@@ -876,7 +876,7 @@ Namespace SpaMgtSysDataSet1TableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Usp_View_Employees"
-            tableMapping.ColumnMappings.Add("ID", "ID")
+            tableMapping.ColumnMappings.Add("Emp Id", "Emp Id")
             tableMapping.ColumnMappings.Add("First Name", "First Name")
             tableMapping.ColumnMappings.Add("Last Name", "Last Name")
             tableMapping.ColumnMappings.Add("Address", "Address")

@@ -36,16 +36,10 @@ Public Class Login
             Dim Book As New Book
             Book.Show()
             Me.Hide()
-        ElseIf UnameTb.Text = "SuperUser" And PasswordTb.Text = "SuperPassword" Then
-            UserId = 0
-            Dim ManageUsers As New ManageUsers
-            ManageUsers.Show()
-            Me.Hide()
         Else
             MsgBox("Wrong UserName and Passwrod")
             UnameTb.Text = ""
             PasswordTb.Text = ""
-            HideShowChkB.Checked = False
         End If
 
     End Sub

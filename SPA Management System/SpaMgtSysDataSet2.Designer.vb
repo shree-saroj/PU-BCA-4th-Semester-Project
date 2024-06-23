@@ -25,7 +25,7 @@ Option Explicit On
 Partial Public Class SpaMgtSysDataSet2
     Inherits Global.System.Data.DataSet
     
-    Private tableUsp_View_Services As Usp_View_ServicesDataTable
+    Private tableUsp_View_Customers As Usp_View_CustomersDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class SpaMgtSysDataSet2
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("Usp_View_Services")) Is Nothing) Then
-                MyBase.Tables.Add(New Usp_View_ServicesDataTable(ds.Tables("Usp_View_Services")))
+            If (Not (ds.Tables("Usp_View_Customers")) Is Nothing) Then
+                MyBase.Tables.Add(New Usp_View_CustomersDataTable(ds.Tables("Usp_View_Customers")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class SpaMgtSysDataSet2
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property Usp_View_Services() As Usp_View_ServicesDataTable
+    Public ReadOnly Property Usp_View_Customers() As Usp_View_CustomersDataTable
         Get
-            Return Me.tableUsp_View_Services
+            Return Me.tableUsp_View_Customers
         End Get
     End Property
     
@@ -153,8 +153,8 @@ Partial Public Class SpaMgtSysDataSet2
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("Usp_View_Services")) Is Nothing) Then
-                MyBase.Tables.Add(New Usp_View_ServicesDataTable(ds.Tables("Usp_View_Services")))
+            If (Not (ds.Tables("Usp_View_Customers")) Is Nothing) Then
+                MyBase.Tables.Add(New Usp_View_CustomersDataTable(ds.Tables("Usp_View_Customers")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class SpaMgtSysDataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tableUsp_View_Services = CType(MyBase.Tables("Usp_View_Services"),Usp_View_ServicesDataTable)
+        Me.tableUsp_View_Customers = CType(MyBase.Tables("Usp_View_Customers"),Usp_View_CustomersDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableUsp_View_Services) Is Nothing) Then
-                Me.tableUsp_View_Services.InitVars
+            If (Not (Me.tableUsp_View_Customers) Is Nothing) Then
+                Me.tableUsp_View_Customers.InitVars
             End If
         End If
     End Sub
@@ -204,13 +204,13 @@ Partial Public Class SpaMgtSysDataSet2
         Me.Namespace = "http://tempuri.org/SpaMgtSysDataSet2.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tableUsp_View_Services = New Usp_View_ServicesDataTable()
-        MyBase.Tables.Add(Me.tableUsp_View_Services)
+        Me.tableUsp_View_Customers = New Usp_View_CustomersDataTable()
+        MyBase.Tables.Add(Me.tableUsp_View_Customers)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Private Function ShouldSerializeUsp_View_Services() As Boolean
+    Private Function ShouldSerializeUsp_View_Customers() As Boolean
         Return false
     End Function
     
@@ -273,27 +273,31 @@ Partial Public Class SpaMgtSysDataSet2
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Delegate Sub Usp_View_ServicesRowChangeEventHandler(ByVal sender As Object, ByVal e As Usp_View_ServicesRowChangeEvent)
+    Public Delegate Sub Usp_View_CustomersRowChangeEventHandler(ByVal sender As Object, ByVal e As Usp_View_CustomersRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class Usp_View_ServicesDataTable
-        Inherits Global.System.Data.TypedTableBase(Of Usp_View_ServicesRow)
+    Partial Public Class Usp_View_CustomersDataTable
+        Inherits Global.System.Data.TypedTableBase(Of Usp_View_CustomersRow)
         
-        Private columnID As Global.System.Data.DataColumn
+        Private columnId As Global.System.Data.DataColumn
         
-        Private columnService_Name As Global.System.Data.DataColumn
+        Private columnFirst_Name As Global.System.Data.DataColumn
         
-        Private columnCost As Global.System.Data.DataColumn
+        Private columnLast_Name As Global.System.Data.DataColumn
+        
+        Private columnAddress As Global.System.Data.DataColumn
+        
+        Private columnContact As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "Usp_View_Services"
+            Me.TableName = "Usp_View_Customers"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -326,25 +330,41 @@ Partial Public Class SpaMgtSysDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property IDColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property IdColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnID
+                Return Me.columnId
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Service_NameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property First_NameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnService_Name
+                Return Me.columnFirst_Name
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property CostColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Last_NameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCost
+                Return Me.columnLast_Name
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property AddressColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAddress
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property ContactColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnContact
             End Get
         End Property
         
@@ -359,50 +379,50 @@ Partial Public Class SpaMgtSysDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As Usp_View_ServicesRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As Usp_View_CustomersRow
             Get
-                Return CType(Me.Rows(index),Usp_View_ServicesRow)
+                Return CType(Me.Rows(index),Usp_View_CustomersRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event Usp_View_ServicesRowChanging As Usp_View_ServicesRowChangeEventHandler
+        Public Event Usp_View_CustomersRowChanging As Usp_View_CustomersRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event Usp_View_ServicesRowChanged As Usp_View_ServicesRowChangeEventHandler
+        Public Event Usp_View_CustomersRowChanged As Usp_View_CustomersRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event Usp_View_ServicesRowDeleting As Usp_View_ServicesRowChangeEventHandler
+        Public Event Usp_View_CustomersRowDeleting As Usp_View_CustomersRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event Usp_View_ServicesRowDeleted As Usp_View_ServicesRowChangeEventHandler
+        Public Event Usp_View_CustomersRowDeleted As Usp_View_CustomersRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Sub AddUsp_View_ServicesRow(ByVal row As Usp_View_ServicesRow)
+        Public Overloads Sub AddUsp_View_CustomersRow(ByVal row As Usp_View_CustomersRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddUsp_View_ServicesRow(ByVal Service_Name As String, ByVal Cost As Single) As Usp_View_ServicesRow
-            Dim rowUsp_View_ServicesRow As Usp_View_ServicesRow = CType(Me.NewRow,Usp_View_ServicesRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Service_Name, Cost}
-            rowUsp_View_ServicesRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowUsp_View_ServicesRow)
-            Return rowUsp_View_ServicesRow
+        Public Overloads Function AddUsp_View_CustomersRow(ByVal First_Name As String, ByVal Last_Name As String, ByVal Address As String, ByVal Contact As String) As Usp_View_CustomersRow
+            Dim rowUsp_View_CustomersRow As Usp_View_CustomersRow = CType(Me.NewRow,Usp_View_CustomersRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, First_Name, Last_Name, Address, Contact}
+            rowUsp_View_CustomersRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowUsp_View_CustomersRow)
+            Return rowUsp_View_CustomersRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function FindByID(ByVal ID As Integer) As Usp_View_ServicesRow
-            Return CType(Me.Rows.Find(New Object() {ID}),Usp_View_ServicesRow)
+        Public Function FindById(ByVal Id As Integer) As Usp_View_CustomersRow
+            Return CType(Me.Rows.Find(New Object() {Id}),Usp_View_CustomersRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As Usp_View_ServicesDataTable = CType(MyBase.Clone,Usp_View_ServicesDataTable)
+            Dim cln As Usp_View_CustomersDataTable = CType(MyBase.Clone,Usp_View_CustomersDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -410,60 +430,71 @@ Partial Public Class SpaMgtSysDataSet2
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New Usp_View_ServicesDataTable()
+            Return New Usp_View_CustomersDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnID = MyBase.Columns("ID")
-            Me.columnService_Name = MyBase.Columns("Service Name")
-            Me.columnCost = MyBase.Columns("Cost")
+            Me.columnId = MyBase.Columns("Id")
+            Me.columnFirst_Name = MyBase.Columns("First Name")
+            Me.columnLast_Name = MyBase.Columns("Last Name")
+            Me.columnAddress = MyBase.Columns("Address")
+            Me.columnContact = MyBase.Columns("Contact")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnID)
-            Me.columnService_Name = New Global.System.Data.DataColumn("Service Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnService_Name)
-            Me.columnCost = New Global.System.Data.DataColumn("Cost", GetType(Single), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCost)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
-            Me.columnID.AutoIncrement = true
-            Me.columnID.AllowDBNull = false
-            Me.columnID.ReadOnly = true
-            Me.columnID.Unique = true
-            Me.columnService_Name.AllowDBNull = false
-            Me.columnService_Name.MaxLength = 200
-            Me.columnCost.AllowDBNull = false
+            Me.columnId = New Global.System.Data.DataColumn("Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnId)
+            Me.columnFirst_Name = New Global.System.Data.DataColumn("First Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFirst_Name)
+            Me.columnLast_Name = New Global.System.Data.DataColumn("Last Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLast_Name)
+            Me.columnAddress = New Global.System.Data.DataColumn("Address", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAddress)
+            Me.columnContact = New Global.System.Data.DataColumn("Contact", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnContact)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, true))
+            Me.columnId.AutoIncrement = true
+            Me.columnId.AllowDBNull = false
+            Me.columnId.ReadOnly = true
+            Me.columnId.Unique = true
+            Me.columnFirst_Name.AllowDBNull = false
+            Me.columnFirst_Name.MaxLength = 50
+            Me.columnLast_Name.AllowDBNull = false
+            Me.columnLast_Name.MaxLength = 50
+            Me.columnAddress.AllowDBNull = false
+            Me.columnAddress.MaxLength = 200
+            Me.columnContact.AllowDBNull = false
+            Me.columnContact.MaxLength = 20
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function NewUsp_View_ServicesRow() As Usp_View_ServicesRow
-            Return CType(Me.NewRow,Usp_View_ServicesRow)
+        Public Function NewUsp_View_CustomersRow() As Usp_View_CustomersRow
+            Return CType(Me.NewRow,Usp_View_CustomersRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New Usp_View_ServicesRow(builder)
+            Return New Usp_View_CustomersRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(Usp_View_ServicesRow)
+            Return GetType(Usp_View_CustomersRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.Usp_View_ServicesRowChangedEvent) Is Nothing) Then
-                RaiseEvent Usp_View_ServicesRowChanged(Me, New Usp_View_ServicesRowChangeEvent(CType(e.Row,Usp_View_ServicesRow), e.Action))
+            If (Not (Me.Usp_View_CustomersRowChangedEvent) Is Nothing) Then
+                RaiseEvent Usp_View_CustomersRowChanged(Me, New Usp_View_CustomersRowChangeEvent(CType(e.Row,Usp_View_CustomersRow), e.Action))
             End If
         End Sub
         
@@ -471,8 +502,8 @@ Partial Public Class SpaMgtSysDataSet2
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.Usp_View_ServicesRowChangingEvent) Is Nothing) Then
-                RaiseEvent Usp_View_ServicesRowChanging(Me, New Usp_View_ServicesRowChangeEvent(CType(e.Row,Usp_View_ServicesRow), e.Action))
+            If (Not (Me.Usp_View_CustomersRowChangingEvent) Is Nothing) Then
+                RaiseEvent Usp_View_CustomersRowChanging(Me, New Usp_View_CustomersRowChangeEvent(CType(e.Row,Usp_View_CustomersRow), e.Action))
             End If
         End Sub
         
@@ -480,8 +511,8 @@ Partial Public Class SpaMgtSysDataSet2
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.Usp_View_ServicesRowDeletedEvent) Is Nothing) Then
-                RaiseEvent Usp_View_ServicesRowDeleted(Me, New Usp_View_ServicesRowChangeEvent(CType(e.Row,Usp_View_ServicesRow), e.Action))
+            If (Not (Me.Usp_View_CustomersRowDeletedEvent) Is Nothing) Then
+                RaiseEvent Usp_View_CustomersRowDeleted(Me, New Usp_View_CustomersRowChangeEvent(CType(e.Row,Usp_View_CustomersRow), e.Action))
             End If
         End Sub
         
@@ -489,14 +520,14 @@ Partial Public Class SpaMgtSysDataSet2
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.Usp_View_ServicesRowDeletingEvent) Is Nothing) Then
-                RaiseEvent Usp_View_ServicesRowDeleting(Me, New Usp_View_ServicesRowChangeEvent(CType(e.Row,Usp_View_ServicesRow), e.Action))
+            If (Not (Me.Usp_View_CustomersRowDeletingEvent) Is Nothing) Then
+                RaiseEvent Usp_View_CustomersRowDeleting(Me, New Usp_View_CustomersRowChangeEvent(CType(e.Row,Usp_View_CustomersRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub RemoveUsp_View_ServicesRow(ByVal row As Usp_View_ServicesRow)
+        Public Sub RemoveUsp_View_CustomersRow(ByVal row As Usp_View_CustomersRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -523,7 +554,7 @@ Partial Public Class SpaMgtSysDataSet2
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "Usp_View_ServicesDataTable"
+            attribute2.FixedValue = "Usp_View_CustomersDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -570,48 +601,70 @@ Partial Public Class SpaMgtSysDataSet2
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class Usp_View_ServicesRow
+    Partial Public Class Usp_View_CustomersRow
         Inherits Global.System.Data.DataRow
         
-        Private tableUsp_View_Services As Usp_View_ServicesDataTable
+        Private tableUsp_View_Customers As Usp_View_CustomersDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableUsp_View_Services = CType(Me.Table,Usp_View_ServicesDataTable)
+            Me.tableUsp_View_Customers = CType(Me.Table,Usp_View_CustomersDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property ID() As Integer
+        Public Property Id() As Integer
             Get
-                Return CType(Me(Me.tableUsp_View_Services.IDColumn),Integer)
+                Return CType(Me(Me.tableUsp_View_Customers.IdColumn),Integer)
             End Get
             Set
-                Me(Me.tableUsp_View_Services.IDColumn) = value
+                Me(Me.tableUsp_View_Customers.IdColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Service_Name() As String
+        Public Property First_Name() As String
             Get
-                Return CType(Me(Me.tableUsp_View_Services.Service_NameColumn),String)
+                Return CType(Me(Me.tableUsp_View_Customers.First_NameColumn),String)
             End Get
             Set
-                Me(Me.tableUsp_View_Services.Service_NameColumn) = value
+                Me(Me.tableUsp_View_Customers.First_NameColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Cost() As Single
+        Public Property Last_Name() As String
             Get
-                Return CType(Me(Me.tableUsp_View_Services.CostColumn),Single)
+                Return CType(Me(Me.tableUsp_View_Customers.Last_NameColumn),String)
             End Get
             Set
-                Me(Me.tableUsp_View_Services.CostColumn) = value
+                Me(Me.tableUsp_View_Customers.Last_NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Address() As String
+            Get
+                Return CType(Me(Me.tableUsp_View_Customers.AddressColumn),String)
+            End Get
+            Set
+                Me(Me.tableUsp_View_Customers.AddressColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Contact() As String
+            Get
+                Return CType(Me(Me.tableUsp_View_Customers.ContactColumn),String)
+            End Get
+            Set
+                Me(Me.tableUsp_View_Customers.ContactColumn) = value
             End Set
         End Property
     End Class
@@ -620,16 +673,16 @@ Partial Public Class SpaMgtSysDataSet2
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Class Usp_View_ServicesRowChangeEvent
+    Public Class Usp_View_CustomersRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As Usp_View_ServicesRow
+        Private eventRow As Usp_View_CustomersRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub New(ByVal row As Usp_View_ServicesRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As Usp_View_CustomersRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -637,7 +690,7 @@ Partial Public Class SpaMgtSysDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Row() As Usp_View_ServicesRow
+        Public ReadOnly Property Row() As Usp_View_CustomersRow
             Get
                 Return Me.eventRow
             End Get
@@ -664,7 +717,7 @@ Namespace SpaMgtSysDataSet2TableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class Usp_View_ServicesTableAdapter
+    Partial Public Class Usp_View_CustomersTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
@@ -781,10 +834,12 @@ Namespace SpaMgtSysDataSet2TableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "Usp_View_Services"
-            tableMapping.ColumnMappings.Add("ID", "ID")
-            tableMapping.ColumnMappings.Add("Service Name", "Service Name")
-            tableMapping.ColumnMappings.Add("Cost", "Cost")
+            tableMapping.DataSetTable = "Usp_View_Customers"
+            tableMapping.ColumnMappings.Add("Id", "Id")
+            tableMapping.ColumnMappings.Add("First Name", "First Name")
+            tableMapping.ColumnMappings.Add("Last Name", "Last Name")
+            tableMapping.ColumnMappings.Add("Address", "Address")
+            tableMapping.ColumnMappings.Add("Contact", "Contact")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -801,7 +856,7 @@ Namespace SpaMgtSysDataSet2TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "dbo.Usp_View_Services"
+            Me._commandCollection(0).CommandText = "dbo.Usp_View_Customers"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
@@ -810,7 +865,7 @@ Namespace SpaMgtSysDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As SpaMgtSysDataSet2.Usp_View_ServicesDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As SpaMgtSysDataSet2.Usp_View_CustomersDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -823,9 +878,9 @@ Namespace SpaMgtSysDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As SpaMgtSysDataSet2.Usp_View_ServicesDataTable
+        Public Overloads Overridable Function GetData() As SpaMgtSysDataSet2.Usp_View_CustomersDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As SpaMgtSysDataSet2.Usp_View_ServicesDataTable = New SpaMgtSysDataSet2.Usp_View_ServicesDataTable()
+            Dim dataTable As SpaMgtSysDataSet2.Usp_View_CustomersDataTable = New SpaMgtSysDataSet2.Usp_View_CustomersDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
