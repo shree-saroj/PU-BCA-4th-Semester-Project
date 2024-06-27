@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA312799-97D1-4270-9D79-5405BCC15C87}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Spa_Management_System.My.MyApplication</StartupObject>
+    <RootNamespace>Spa_Management_System</RootNamespace>
+    <AssemblyName>Spa Management System</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Spa Management System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Spa Management System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel.Designer.vb">
+      <DependentUpon>AdminPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanelCustomerInfo.Designer.vb">
+      <DependentUpon>AdminPanelCustomerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelCustomerInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanelManageEmployees.Designer.vb">
+      <DependentUpon>AdminPanelManageEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelManageEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanelManageServices.Designer.vb">
+      <DependentUpon>AdminPanelManageServices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelManageServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanelManageUsers.Designer.vb">
+      <DependentUpon>AdminPanelManageUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelManageUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanelViewTransactions.Designer.vb">
+      <DependentUpon>AdminPanelViewTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelViewTransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalVariables.vb" />
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SpaMgtSysDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpaMgtSysDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpaMgtSysDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpaMgtSysDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpaMgtSysDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpaMgtSysDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpaMgtSysDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpaMgtSysDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpaMgtSysDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpaMgtSysDataSet4.vb">
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanelBook.Designer.vb">
+      <DependentUpon>UserPanelBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanelBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersPanel.Designer.vb">
+      <DependentUpon>UsersPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersPanelCancelAppointment.Designer.vb">
+      <DependentUpon>UsersPanelCancelAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPanelCancelAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersPanelCheckAppointment.Designer.vb">
+      <DependentUpon>UsersPanelCheckAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPanelCheckAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersPanelManageCustomers.Designer.vb">
+      <DependentUpon>UsersPanelManageCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPanelManageCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersPanelShiftAppointment.Designer.vb">
+      <DependentUpon>UsersPanelShiftAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPanelShiftAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanelCustomerInfo.resx">
+      <DependentUpon>AdminPanelCustomerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanelManageEmployees.resx">
+      <DependentUpon>AdminPanelManageEmployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanelManageServices.resx">
+      <DependentUpon>AdminPanelManageServices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanelManageUsers.resx">
+      <DependentUpon>AdminPanelManageUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanelViewTransactions.resx">
+      <DependentUpon>AdminPanelViewTransactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelBook.resx">
+      <DependentUpon>UserPanelBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersPanel.resx">
+      <DependentUpon>UsersPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersPanelCancelAppointment.resx">
+      <DependentUpon>UsersPanelCancelAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersPanelCheckAppointment.resx">
+      <DependentUpon>UsersPanelCheckAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersPanelManageCustomers.resx">
+      <DependentUpon>UsersPanelManageCustomers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersPanelShiftAppointment.resx">
+      <DependentUpon>UsersPanelShiftAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="SpaMgtSysDataSet.xsc">
+      <DependentUpon>SpaMgtSysDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpaMgtSysDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpaMgtSysDataSet.xss">
+      <DependentUpon>SpaMgtSysDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet1.xsc">
+      <DependentUpon>SpaMgtSysDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpaMgtSysDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpaMgtSysDataSet1.xss">
+      <DependentUpon>SpaMgtSysDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet2.xsc">
+      <DependentUpon>SpaMgtSysDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpaMgtSysDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpaMgtSysDataSet2.xss">
+      <DependentUpon>SpaMgtSysDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet3.xsc">
+      <DependentUpon>SpaMgtSysDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpaMgtSysDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpaMgtSysDataSet3.xss">
+      <DependentUpon>SpaMgtSysDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet4.xsc">
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpaMgtSysDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpaMgtSysDataSet4.xss">
+      <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloased-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opened-eye.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
