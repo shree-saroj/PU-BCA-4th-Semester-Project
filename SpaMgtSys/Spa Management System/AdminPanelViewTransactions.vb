@@ -4,9 +4,10 @@ Public Class AdminPanelViewTransactions
     Private Sub AdminPanelViewTransactions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'SpaMgtSysDataSet4.Usp_View_Transactions' table. You can move, or remove it, as needed.
         Me.Usp_View_TransactionsTableAdapter.Fill(Me.SpaMgtSysDataSet4.Usp_View_Transactions)
-
     End Sub
-
+    Private Sub UsersPanelManageCustomers_Deactivate(sender As Object, e As EventArgs) Handles MyBase.Deactivate
+        Me.Dispose()
+    End Sub
     Private Sub SearchBtn_Click(sender As Object, e As EventArgs) Handles SearchBtn.Click
         Dim UserId As Integer
         Dim CusId As Integer

@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Module GlobalVariables
-    Public _constr As String = "Data Source=Shree0g\SQLEXPRESS;Initial Catalog=SpaMgtSys;Persist Security Info=True;User ID=sa;Password=Sql@Shree"
+    Public _constr As String = "Data Source=SHRIYANKA\SQLEXPRESS;Initial Catalog=SpaMgtSys;Persist Security Info=True;User ID=sa;Password=Saroj@Shree"
     Public IsAdmin As Integer = 0
     Public UserId As Integer = 0
     Public Key As Integer = 0

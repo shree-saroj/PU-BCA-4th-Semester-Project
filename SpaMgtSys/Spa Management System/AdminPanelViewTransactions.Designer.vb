@@ -29,18 +29,18 @@ Partial Class AdminPanelViewTransactions
         Me.UserIdTb = New System.Windows.Forms.TextBox()
         Me.CusIdTb = New System.Windows.Forms.TextBox()
         Me.SortByCustomerIdLbl = New System.Windows.Forms.Label()
-        Me.SpaMgtSysDataSet4 = New Spa_Management_System.SpaMgtSysDataSet4()
-        Me.Usp_View_TransactionsTableAdapter = New Spa_Management_System.SpaMgtSysDataSet4TableAdapters.Usp_View_TransactionsTableAdapter()
-        Me.UspViewTransactionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CusIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CustomerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AmountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UspViewTransactionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SpaMgtSysDataSet4 = New Spa_Management_System.SpaMgtSysDataSet4()
+        Me.Usp_View_TransactionsTableAdapter = New Spa_Management_System.SpaMgtSysDataSet4TableAdapters.Usp_View_TransactionsTableAdapter()
         CType(Me.TransactionsDGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpaMgtSysDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UspViewTransactionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpaMgtSysDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TransactionsDGV
@@ -108,20 +108,6 @@ Partial Class AdminPanelViewTransactions
         Me.SortByCustomerIdLbl.TabIndex = 83
         Me.SortByCustomerIdLbl.Text = "Sort By Cus ID:"
         '
-        'SpaMgtSysDataSet4
-        '
-        Me.SpaMgtSysDataSet4.DataSetName = "SpaMgtSysDataSet4"
-        Me.SpaMgtSysDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Usp_View_TransactionsTableAdapter
-        '
-        Me.Usp_View_TransactionsTableAdapter.ClearBeforeFill = True
-        '
-        'UspViewTransactionsBindingSource
-        '
-        Me.UspViewTransactionsBindingSource.DataMember = "Usp_View_Transactions"
-        Me.UspViewTransactionsBindingSource.DataSource = Me.SpaMgtSysDataSet4
-        '
         'TIdDataGridViewTextBoxColumn
         '
         Me.TIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -175,6 +161,20 @@ Partial Class AdminPanelViewTransactions
         Me.AmountDataGridViewTextBoxColumn.Name = "AmountDataGridViewTextBoxColumn"
         Me.AmountDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'UspViewTransactionsBindingSource
+        '
+        Me.UspViewTransactionsBindingSource.DataMember = "Usp_View_Transactions"
+        Me.UspViewTransactionsBindingSource.DataSource = Me.SpaMgtSysDataSet4
+        '
+        'SpaMgtSysDataSet4
+        '
+        Me.SpaMgtSysDataSet4.DataSetName = "SpaMgtSysDataSet4"
+        Me.SpaMgtSysDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Usp_View_TransactionsTableAdapter
+        '
+        Me.Usp_View_TransactionsTableAdapter.ClearBeforeFill = True
+        '
         'AdminPanelViewTransactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
@@ -187,12 +187,12 @@ Partial Class AdminPanelViewTransactions
         Me.Controls.Add(Me.SearchBtn)
         Me.Controls.Add(Me.TransactionsDGV)
         Me.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "AdminPanelViewTransactions"
         Me.Text = "AdminPanelViewTransactions"
         CType(Me.TransactionsDGV, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpaMgtSysDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UspViewTransactionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpaMgtSysDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

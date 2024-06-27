@@ -189,6 +189,7 @@ Public Class UserPanelBook
     End Sub
     Private Sub Reset()
         CIdTb.Text = ""
+        CusNameTb.Text = ""
         ServicesCB.Text = ""
         PriceViewLbl.Text = ""
         CustomerInfoDGV.DataSource = ""
@@ -218,6 +219,7 @@ Public Class UserPanelBook
             MsgBox("Select Row")
         End Try
     End Sub
-
-
+    Private Sub ServicesCB_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles ServicesCB.SelectionChangeCommitted
+        Getprice()
+    End Sub
 End Class
