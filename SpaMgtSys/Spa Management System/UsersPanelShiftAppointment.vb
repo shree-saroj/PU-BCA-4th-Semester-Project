@@ -126,6 +126,7 @@ Public Class UsersPanelShiftAppointment
             MsgBox("DataBase Exception Occured! Try Again")
             Reset()
         Else
+            MsgBox("Booking Shifting Successfully")
             Reset()
         End If
     End Sub
