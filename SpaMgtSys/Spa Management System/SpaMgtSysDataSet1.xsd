@@ -35,18 +35,18 @@
   <xs:element name="SpaMgtSysDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SpaMgtSysDataSet1" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SpaMgtSysDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Usp_View_Services" msprop:Generator_RowClassName="Usp_View_ServicesRow" msprop:Generator_RowEvHandlerName="Usp_View_ServicesRowChangeEventHandler" msprop:Generator_RowDeletedName="Usp_View_ServicesRowDeleted" msprop:Generator_RowDeletingName="Usp_View_ServicesRowDeleting" msprop:Generator_RowEvArgName="Usp_View_ServicesRowChangeEvent" msprop:Generator_TablePropName="Usp_View_Services" msprop:Generator_RowChangedName="Usp_View_ServicesRowChanged" msprop:Generator_UserTableName="Usp_View_Services" msprop:Generator_RowChangingName="Usp_View_ServicesRowChanging" msprop:Generator_TableClassName="Usp_View_ServicesDataTable" msprop:Generator_TableVarName="tableUsp_View_Services">
+        <xs:element name="Usp_View_Services" msprop:Generator_RowEvHandlerName="Usp_View_ServicesRowChangeEventHandler" msprop:Generator_RowDeletedName="Usp_View_ServicesRowDeleted" msprop:Generator_RowDeletingName="Usp_View_ServicesRowDeleting" msprop:Generator_RowEvArgName="Usp_View_ServicesRowChangeEvent" msprop:Generator_TablePropName="Usp_View_Services" msprop:Generator_RowChangedName="Usp_View_ServicesRowChanged" msprop:Generator_UserTableName="Usp_View_Services" msprop:Generator_RowChangingName="Usp_View_ServicesRowChanging" msprop:Generator_RowClassName="Usp_View_ServicesRow" msprop:Generator_TableClassName="Usp_View_ServicesDataTable" msprop:Generator_TableVarName="tableUsp_View_Services">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
-              <xs:element name="Service_x0020_Name" msprop:Generator_UserColumnName="Service Name" msprop:Generator_ColumnPropNameInTable="Service_NameColumn" msprop:Generator_ColumnPropNameInRow="Service_Name" msprop:Generator_ColumnVarNameInTable="columnService_Name">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="Service_x0020_Name" msprop:Generator_ColumnPropNameInTable="Service_NameColumn" msprop:Generator_ColumnPropNameInRow="Service_Name" msprop:Generator_UserColumnName="Service Name" msprop:Generator_ColumnVarNameInTable="columnService_Name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cost" msprop:Generator_UserColumnName="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" type="xs:float" />
+              <xs:element name="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_UserColumnName="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" type="xs:float" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

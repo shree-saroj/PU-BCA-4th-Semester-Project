@@ -32,4 +32,9 @@
         AdminPanelViewTransactions.MdiParent = Me
         AdminPanelViewTransactions.Show()
     End Sub
+
+    Private Sub StatisticsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StatisticsToolStripMenuItem.Click
+        AdminPanelViewStatistics.MdiParent = Me
+        AdminPanelViewStatistics.Show()
+    End Sub
 End Class

@@ -291,6 +291,7 @@ Partial Class AdminPanelCustomerInfo
         Me.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "AdminPanelCustomerInfo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Customers Info"
         CType(Me.CustomersDGV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UspViewCustomersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

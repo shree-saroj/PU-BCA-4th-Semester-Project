@@ -103,6 +103,12 @@
     <Compile Include="AdminPanelManageUsers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminPanelViewStatistics.Designer.vb">
+      <DependentUpon>AdminPanelViewStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelViewStatistics.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminPanelViewTransactions.Designer.vb">
       <DependentUpon>AdminPanelViewTransactions.vb</DependentUpon>
     </Compile>
@@ -161,6 +167,16 @@
     <Compile Include="SpaMgtSysDataSet4.vb">
       <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SpaMgtSysDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpaMgtSysDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpaMgtSysDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpaMgtSysDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserPanelBook.Designer.vb">
       <DependentUpon>UserPanelBook.vb</DependentUpon>
     </Compile>
@@ -213,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPanelManageUsers.resx">
       <DependentUpon>AdminPanelManageUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanelViewStatistics.resx">
+      <DependentUpon>AdminPanelViewStatistics.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPanelViewTransactions.resx">
       <DependentUpon>AdminPanelViewTransactions.vb</DependentUpon>
@@ -310,6 +329,28 @@
     </None>
     <None Include="SpaMgtSysDataSet4.xss">
       <DependentUpon>SpaMgtSysDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet5.xsc">
+      <DependentUpon>SpaMgtSysDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpaMgtSysDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpaMgtSysDataSet5.xss">
+      <DependentUpon>SpaMgtSysDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet6.xsc">
+      <DependentUpon>SpaMgtSysDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SpaMgtSysDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpaMgtSysDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpaMgtSysDataSet6.xss">
+      <DependentUpon>SpaMgtSysDataSet6.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

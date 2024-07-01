@@ -34,4 +34,21 @@ Public Class AdminPanelViewTransactions
             TransactionsDGV.DataSource = DS.Tables(0)
         End If
     End Sub
+
+    Private Sub ByDateSearch_Click(sender As Object, e As EventArgs) Handles ByDateSearch.Click
+        Dim Query As String = "Usp_Sort_TransactionsByDate"
+        Dim Param As New List(Of SqlParameter) From {
+                New SqlParameter("@FromDate", FromDTP.Value.ToString),
+                New SqlParameter("@ToDate", ToDTP.Value.ToString)
+            }
+        Dim CmdType As CommandType = CommandType.StoredProcedure
+        Dim DS As DataSet = Search(Query, Param, CmdType)
+        TransactionsDGV.DataSource = DS.Tables(0)
+    End Sub
+
+    Private Sub ResetBtn_Click(sender As Object, e As EventArgs) Handles ResetBtn.Click
+        TransactionsDGV.DataSource = SpaMgtSysDataSet4.Usp_View_Transactions
+        UserIdTb.Text = ""
+        CusIdTb.Text = ""
+    End Sub
 End Class

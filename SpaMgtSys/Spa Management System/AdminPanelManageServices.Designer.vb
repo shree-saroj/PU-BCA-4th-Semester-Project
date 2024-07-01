@@ -253,6 +253,7 @@ Partial Class AdminPanelManageServices
         Me.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "AdminPanelManageServices"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Manage Services"
         CType(Me.EmployeeDGV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UspViewServicesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

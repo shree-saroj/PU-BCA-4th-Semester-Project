@@ -100,7 +100,6 @@ Public Class UserPanelBook
         Getprice()
     End Sub
     Private Sub DateDP_Enter(sender As Object, e As EventArgs) Handles DateDP.Enter
-        Gettime()
         Getprice()
     End Sub
     Private Sub AddToBill_Click(sender As Object, e As EventArgs) Handles AddToBill.Click

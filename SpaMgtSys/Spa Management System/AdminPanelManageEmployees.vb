@@ -8,10 +8,6 @@ Public Class AdminPanelManageEmployees
         'TODO: This line of code loads data into the 'SpaMgtSysDataSet2.Usp_View_Employees' table. You can move, or remove it, as needed.
         Me.Usp_View_EmployeesTableAdapter.Fill(Me.SpaMgtSysDataSet2.Usp_View_Employees)
     End Sub
-
-
-
-
     Private Sub Reset()
         EFNameTb.Text = ""
         ELNameTb.Text = ""

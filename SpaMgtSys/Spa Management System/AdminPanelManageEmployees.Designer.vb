@@ -318,6 +318,7 @@ Partial Class AdminPanelManageEmployees
         Me.Font = New System.Drawing.Font("Yu Gothic UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "AdminPanelManageEmployees"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Manage Employees"
         CType(Me.EmployeeDGV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UspViewEmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

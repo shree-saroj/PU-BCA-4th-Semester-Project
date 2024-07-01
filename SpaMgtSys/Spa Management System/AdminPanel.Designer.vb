@@ -53,19 +53,19 @@ Partial Class AdminPanel
         'ServicesToolStripMenuItem
         '
         Me.ServicesToolStripMenuItem.Name = "ServicesToolStripMenuItem"
-        Me.ServicesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ServicesToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.ServicesToolStripMenuItem.Text = "Services"
         '
         'EmployeesToolStripMenuItem
         '
         Me.EmployeesToolStripMenuItem.Name = "EmployeesToolStripMenuItem"
-        Me.EmployeesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EmployeesToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.EmployeesToolStripMenuItem.Text = "Employees"
         '
         'UsersToolStripMenuItem
         '
         Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.UsersToolStripMenuItem.Text = "Users"
         '
         'ViewToolStripMenuItem
@@ -78,19 +78,19 @@ Partial Class AdminPanel
         'TransactionsToolStripMenuItem
         '
         Me.TransactionsToolStripMenuItem.Name = "TransactionsToolStripMenuItem"
-        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TransactionsToolStripMenuItem.Text = "Transactions"
         '
         'CustomerInfoToolStripMenuItem
         '
         Me.CustomerInfoToolStripMenuItem.Name = "CustomerInfoToolStripMenuItem"
-        Me.CustomerInfoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CustomerInfoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CustomerInfoToolStripMenuItem.Text = "Customer Info"
         '
         'StatisticsToolStripMenuItem
         '
         Me.StatisticsToolStripMenuItem.Name = "StatisticsToolStripMenuItem"
-        Me.StatisticsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StatisticsToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.StatisticsToolStripMenuItem.Text = "Statistics"
         '
         'AdminPanel
@@ -102,6 +102,7 @@ Partial Class AdminPanel
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "AdminPanel"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AdminPanel"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

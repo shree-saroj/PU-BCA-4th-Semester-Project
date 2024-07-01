@@ -1,14 +1,13 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class AdminPanelManageUsers
-
     Private Sub AdminPanelManageUsers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'SpaMgtSysDataSet3.Usp_View_Users' table. You can move, or remove it, as needed.
         Me.Usp_View_UsersTableAdapter.Fill(Me.SpaMgtSysDataSet3.Usp_View_Users)
         UPasswdTb.UseSystemPasswordChar = True
         UConfirmPasswdTb.UseSystemPasswordChar = True
     End Sub
-    Private Sub UsersPanelManageCustomers_Deactivate(sender As Object, e As EventArgs) Handles MyBase.Deactivate
+    Private Sub UsersPanelManageCustomers_Deactivate(sender As Object, e As EventArgs) Handles MyBase.Closed
         Me.Dispose()
     End Sub
 
@@ -133,9 +132,7 @@ Public Class AdminPanelManageUsers
         End Try
     End Sub
     Private Sub ERemoveBtn_Click(sender As Object, e As EventArgs) Handles URemoveBtn.Click
-        If UPasswdTb.Text <> UConfirmPasswdTb.Text Then
-            MsgBox("Password Doesn't Match")
-        ElseIf UFNameTb.Text = "" Or ULNameTb.Text = "" Or UAddressTb.Text = "" Or UContactTb.Text = "" Then
+        If UFNameTb.Text = "" Or ULNameTb.Text = "" Or UAddressTb.Text = "" Or UContactTb.Text = "" Then
             MsgBox("Missing Information")
         Else
             Dim Query As String = "Usp_Remove_User"

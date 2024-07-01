@@ -30,9 +30,10 @@ Public Class LoginForm
             Me.Hide()
         ElseIf UnameTb.Text = "SuperUser" And PasswordTb.Text = "SuperPassword" Then
             UserId = 0
-            Dim AdminPnl As New AdminPanel
-            AdminPnl.Show()
-            Me.Hide()
+            AdminPanelManageUsers.Show()
+            UnameTb.Text = ""
+            PasswordTb.Text = ""
+            HideShowChkB.Checked = False
         Else
             MsgBox("Wrong UserName and Passwrod")
             UnameTb.Text = ""
